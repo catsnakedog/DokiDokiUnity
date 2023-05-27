@@ -1,0 +1,60 @@
+{
+    "gameData": {
+        "textTypes": [
+            {
+                "branch": 1,
+                "charaterName": "c++",
+                "Ctext": "안녕하세요1",
+                "Cvoice": "안녕하세요1",
+                "BG": "기본배경",
+                "ClocationType": 1,
+                "eventType": 0
+            },
+            {
+                "branch": 1,
+                "charaterName": "c++",
+                "Ctext": "안녕하세요2",
+                "Cvoice": "안녕하세요2",
+                "BG": "기본배경",
+                "ClocationType": 2,
+                "eventType": 0
+            },
+            {
+                "branch": 1,
+                "charaterName": "c++",
+                "Ctext": "안녕하세요3",
+                "Cvoice": "안녕하세요3",
+                "BG": "기본배경",
+                "ClocationType": 1,
+                "eventType": 0
+            },
+            {
+                "branch": 1,
+                "charaterName": "c++",
+                "Ctext": "안녕하세요4",
+                "Cvoice": "안녕하세요4",
+                "BG": "기본배경",
+                "ClocationType": 3,
+                "eventType": 0
+            },
+            {
+                "branch": 1,
+                "charaterName": "c++",
+                "Ctext": "안녕하세요5",
+                "Cvoice": "안녕하세요5",
+                "BG": "기본배경",
+                "ClocationType": 4,
+                "eventType": 0
+            },
+            {
+                "branch": 1,
+                "charaterName": "c++",
+                "Ctext": "안녕하세요6",
+                "Cvoice": "안녕하세요6",
+                "BG": "기본배경",
+                "ClocationType": 1,
+                "eventType": 0
+            }
+        ]
+    }
+}
