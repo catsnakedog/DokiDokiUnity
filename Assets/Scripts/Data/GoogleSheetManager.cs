@@ -7,12 +7,12 @@ using UnityEngine.Networking;
 [System.Serializable]
 public class GoogleSheetManager
 {
-    public DataManager Data;
+    public DataManager Single;
     const string URL = "https://script.google.com/macros/s/AKfycbytSlQ0aqSlIunUutGTm9tUNXmUbF1pDc2nUWCJxxBpjG5vA4KspSqGQOV3eMFar_VM/exec";
     string[] strings;
-    List<TextType> processingData;
+    List<TextInfo> processingData;
 
-    public List<TextType> GetData()
+    public List<TextInfo> GetData()
     {
         return processingData;
     }
@@ -28,15 +28,15 @@ public class GoogleSheetManager
         strings = data.Split(',');
 
         processingData = DataProcessing(strings);
-        Data.saveData.gameData.textTypes = processingData;
+        Single.data.textData.textInfo = processingData;
     }
 
-    List<TextType> DataProcessing(string[] data)
+    List<TextInfo> DataProcessing(string[] data)
     {
-        List<TextType> texts = new List<TextType>();
+        List<TextInfo> texts = new List<TextInfo>();
         for(int i=0; i < data.Length/7; i++)
         {
-            TextType text = new TextType();
+            TextInfo text = new TextInfo();
             text.branch = int.Parse(data[i*7 + 0]);
             text.charaterName = data[i*7 + 1];
             text.Ctext = data[i*7 + 2];

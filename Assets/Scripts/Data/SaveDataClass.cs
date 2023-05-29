@@ -10,13 +10,16 @@ using JetBrains.Annotations;
 public class SaveDataClass
 {
     public GameData gameData;
-    public SaveDataClass(GameData gameData)
+    public TextData textData;
+    public SaveDataClass(GameData gameData, TextData textData)
     {
         this.gameData = gameData;
+        this.textData = textData;
     }
     public SaveDataClass()
     {
         this.gameData = new GameData();
+        this.textData = new TextData();
     }
 }
 
@@ -24,19 +27,41 @@ public class SaveDataClass
 [System.Serializable]
 public class GameData
 {
-    public List<TextType> textTypes;
-    public GameData(List<TextType> textTypes)
+    public Stat stat;
+    public GameData(Stat stat)
     {
-        this.textTypes = textTypes;
+        this.stat = stat;
     }
     public GameData()
     {
-        this.textTypes =new List<TextType>();
+        stat = new Stat();
     }
 }
 
 [System.Serializable]
-public class TextType
+public class Stat
+{
+
+}
+#endregion
+
+#region TextData
+[System.Serializable]
+public class TextData
+{
+    public List<TextInfo> textInfo;
+    public TextData(List<TextInfo> textInfo)
+    {
+        this.textInfo = textInfo;
+    }
+    public TextData()
+    {
+        this.textInfo = new List<TextInfo>();
+    }
+}
+
+[System.Serializable]
+public class TextInfo
 {
     public int branch;
     public string charaterName; // n + 캐릭터 이름들? -> 한 변수로 여러명의 캐릭터 입력받기 가능
@@ -45,7 +70,7 @@ public class TextType
     public string BG;
     public int ClocationType;
     public int eventType; // 여러가지 기능들 짬통 ex 미니게임, 특수효과 등등
-    public TextType(int branch, string charaterName, string Ctext, string Cvoice, string BG, int ClocationType, int eventType)
+    public TextInfo(int branch, string charaterName, string Ctext, string Cvoice, string BG, int ClocationType, int eventType)
     {
         this.branch = branch;
         this.charaterName = charaterName;
@@ -56,7 +81,7 @@ public class TextType
         this.eventType = eventType;
     }
 
-    public TextType()
+    public TextInfo()
     {
         this.branch = 0;
         this.charaterName = "";

@@ -6,7 +6,7 @@ using System.Text;
 
 public class JsonManager
 {
-    public void SaveJson(SaveDataClass saveData) // 데이터를 저장하는 함수
+    public void SaveJson(SaveDataClass data) // 데이터를 저장하는 함수
     {
         string jsonText;
         string savePath = Application.dataPath + "/Data/GameData.json";
@@ -17,7 +17,7 @@ public class JsonManager
 #if UNITY_ANDROID
         savePath = Application.persistentDataPath + "/Data/GameData.json";
 #endif
-        jsonText = JsonUtility.ToJson(saveData, true);
+        jsonText = JsonUtility.ToJson(data, true);
         FileStream fileStream = new FileStream(savePath, FileMode.Create);
         byte[] bytes = Encoding.UTF8.GetBytes(jsonText);
         fileStream.Write(bytes, 0, bytes.Length);
@@ -26,7 +26,7 @@ public class JsonManager
 
     public SaveDataClass LoadSaveData()
     {
-        SaveDataClass gameData;
+        SaveDataClass data;
         string loadPath = Application.dataPath + "/Data/GameData.json";
 
 #if UNITY_EDITOR_WIN
@@ -42,13 +42,13 @@ public class JsonManager
             stream.Read(bytes, 0, bytes.Length);
             stream.Close();
             string jsonData = Encoding.UTF8.GetString(bytes);
-            gameData = JsonUtility.FromJson<SaveDataClass>(jsonData);
+            data = JsonUtility.FromJson<SaveDataClass>(jsonData);
         }
         else
         {
-            gameData = new SaveDataClass();
+            data = new SaveDataClass();
         }
 
-        return gameData;
+        return data;
     }
 }

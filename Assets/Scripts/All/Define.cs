@@ -9,13 +9,21 @@ public class Define
         Level1,
         Level2,
         Level3,
-        maxCount,
+        maxCount
     }
 
     public enum UItype
     {
         Main,
-        Main2,
-        maxCount,
+        MiniGame,
+        InGame,
+        maxCount
+    }
+
+    public enum BG
+    {
+        기본배경,
+        인게임배경,
+        maxCount
     }
 }
