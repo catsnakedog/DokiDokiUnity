@@ -37,7 +37,7 @@ public class GoogleSheetManager
         for(int i=0; i < data.Length/7; i++)
         {
             TextInfo text = new TextInfo();
-            text.branch = int.Parse(data[i*7 + 0]);
+            text.branch = data[i*7 + 0];
             text.charaterName = data[i*7 + 1];
             text.Ctext = data[i*7 + 2];
             text.Cvoice = data[i*7 + 3];
