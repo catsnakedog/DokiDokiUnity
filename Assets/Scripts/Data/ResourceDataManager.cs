@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class ResourceDataManager : MonoBehaviour
+public class ResourceDataManager
 {
-    public Sprite test;
+    public DataManager Single;
 
-    public void Start()
+    public void GetSprite(string name, string url)
     {
-        StartCoroutine(GetTexture("https://drive.google.com/file/d/1kqel1g3UorondBVjbhjFO1lzDCUwNEL0/view?usp=sharing"));
+        Single.SpriteDataCoroutine(name, url);
     }
 
     string ExtractFileId(string url)
@@ -21,7 +21,7 @@ public class ResourceDataManager : MonoBehaviour
         return url;
     }
 
-    IEnumerator GetTexture(string url)
+    public IEnumerator GetTexture(string name,string url)
     {
         var gdId = ExtractFileId(url);
         var prefix = "http://drive.google.com/uc?export=view&id=";
@@ -29,14 +29,13 @@ public class ResourceDataManager : MonoBehaviour
 
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
         yield return www.SendWebRequest();
-
+        Debug.Log(www.result);
         if (www.result != UnityWebRequest.Result.Success)
             Debug.Log(www.error);
         else
         {
             Texture texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-            test = Sprite.Create((Texture2D)texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-            gameObject.GetComponent<SpriteRenderer>().sprite = test;
+            Single.data.spriteData.sprite.Add(name ,Sprite.Create((Texture2D)texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f)));
         }
     }
 }

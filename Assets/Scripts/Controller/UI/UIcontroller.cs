@@ -12,12 +12,13 @@ public class UIcontroller : MonoBehaviour
 
     public void init()
     {
+        main = MainController.main;
         Levels.Add(GameObject.FindWithTag("Level1"));
         Levels.Add(GameObject.FindWithTag("Level2"));
         Levels.Add(GameObject.FindWithTag("Level3"));
     }
 
-    void UIsetting(Define.UIlevel UIlevel, Define.UItype UItype)
+    public void UIsetting(Define.UIlevel UIlevel, Define.UItype UItype)
     {
         Transform[] childList = Levels[(int)UIlevel].GetComponentsInChildren<Transform>();
         if(childList != null)

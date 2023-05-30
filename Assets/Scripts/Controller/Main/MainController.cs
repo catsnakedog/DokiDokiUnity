@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    static MainController main;
+    public static MainController main;
 
     public UIcontroller UI { get; set; }
     public ResourceController resource { get; set; }
 
 
-    public void Start()
+    void Start()
     {
         init();
     }
-    virtual public void init()
+    public void init()
     {
         main = this.GetComponent<MainController>();
         resource = gameObject.AddComponent<ResourceController>();
@@ -22,5 +22,10 @@ public class MainController : MonoBehaviour
 
         resource.init();
         UI.init();
+    }
+
+    public void Test()
+    {
+        UI.UIsetting(Define.UIlevel.Level1, Define.UItype.Main);
     }
 }
