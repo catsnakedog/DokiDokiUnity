@@ -10,7 +10,7 @@ public class MainController : MonoBehaviour
     public ResourceController resource { get; set; }
 
 
-    void Start()
+    void Awake()
     {
         init();
     }
@@ -22,6 +22,8 @@ public class MainController : MonoBehaviour
 
         resource.init();
         UI.init();
+
+        UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Loading);
     }
 
     public void Test()

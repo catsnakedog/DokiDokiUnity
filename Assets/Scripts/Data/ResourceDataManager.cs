@@ -29,13 +29,13 @@ public class ResourceDataManager
 
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
         yield return www.SendWebRequest();
-        Debug.Log(www.result);
         if (www.result != UnityWebRequest.Result.Success)
             Debug.Log(www.error);
         else
         {
             Texture texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
             Single.data.spriteData.sprite.Add(name ,Sprite.Create((Texture2D)texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f)));
+            Single.data.inGameData.loadingCnt++;
         }
     }
 }

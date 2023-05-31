@@ -32,6 +32,7 @@ public class DataManager : MonoBehaviour
 
         Load();
 
+        data.inGameData.loadingCnt = 0;
         googleSheetManager.Single = Single;
         resourceDataManager.Single = Single;
         StartCoroutine(LoadAllData());

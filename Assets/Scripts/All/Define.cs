@@ -17,6 +17,7 @@ public class Define
         Main,
         MiniGame,
         InGame,
+        Loading,
         maxCount
     }
 

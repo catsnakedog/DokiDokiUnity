@@ -60,13 +60,12 @@ public class GoogleSheetManager
 
     public IEnumerator SpriteDataProcessing(string[] data)
     {
-        int cnt = 0;
+        Single.data.spriteData.sprite.Clear();
+        Single.data.inGameData.maxCnt = data.Length / 2;
         for (int i = 0; i < data.Length / 2; i++)
         {
-            cnt++;
             Single.resourceDataManager.GetSprite(data[2 * i + 0], data[2 * i + 1]);
             yield return new WaitForSeconds(1f);
-            Debug.Log(cnt);
         }
     }
 

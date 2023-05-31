@@ -13,12 +13,14 @@ public class SaveDataClass
     public TextData textData;
     public SpriteData spriteData;
     public QuestData questData;
-    public SaveDataClass(GameData gameData, TextData textData, SpriteData spriteData, QuestData questData)
+    public InGameData inGameData;
+    public SaveDataClass(GameData gameData, TextData textData, SpriteData spriteData, QuestData questData, InGameData inGameData)
     {
         this.gameData = gameData;
         this.textData = textData;
         this.spriteData = spriteData;
         this.questData = questData;
+        this.inGameData = inGameData;
     }
     public SaveDataClass()
     {
@@ -26,6 +28,20 @@ public class SaveDataClass
         this.textData = new TextData();
         this.spriteData = new SpriteData();
         this.questData = new QuestData();
+        this.inGameData = new InGameData();
+    }
+}
+
+[System.Serializable]
+public class InGameData
+{
+    public int loadingCnt;
+    public int maxCnt;
+
+    public InGameData()
+    {
+        this.loadingCnt = 0;
+        this.maxCnt = 10;
     }
 }
 

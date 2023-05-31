@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -937, y: 432}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384699209
@@ -770,6 +770,9 @@ MonoBehaviour:
       textInfo: []
     questData:
       questInfo: []
+    inGameData:
+      loadingCnt: 0
+      maxCnt: 0
 --- !u!4 &1809762487
 Transform:
   m_ObjectHideFlags: 0

@@ -1,60 +1,237 @@
 {
     "gameData": {
-        "textTypes": [
+        "stat": {}
+    },
+    "textData": {
+        "textInfo": [
             {
-                "branch": 1,
-                "charaterName": "c++",
+                "branch": [
+                    1,
+                    0,
+                    0
+                ],
+                "charaterName": "c++_idle",
                 "Ctext": "안녕하세요1",
                 "Cvoice": "안녕하세요1",
-                "BG": "기본배경",
+                "BG": "메인배경",
                 "ClocationType": 1,
                 "eventType": 0
             },
             {
-                "branch": 1,
-                "charaterName": "c++",
+                "branch": [
+                    1,
+                    0,
+                    1
+                ],
+                "charaterName": "c++_idle",
                 "Ctext": "안녕하세요2",
                 "Cvoice": "안녕하세요2",
-                "BG": "기본배경",
-                "ClocationType": 2,
-                "eventType": 0
-            },
-            {
-                "branch": 1,
-                "charaterName": "c++",
-                "Ctext": "안녕하세요3",
-                "Cvoice": "안녕하세요3",
-                "BG": "기본배경",
+                "BG": "메인배경",
                 "ClocationType": 1,
                 "eventType": 0
             },
             {
-                "branch": 1,
-                "charaterName": "c++",
+                "branch": [
+                    1,
+                    0,
+                    2
+                ],
+                "charaterName": "c++_idle",
+                "Ctext": "안녕하세요3",
+                "Cvoice": "안녕하세요3",
+                "BG": "메인배경",
+                "ClocationType": 1,
+                "eventType": 0
+            },
+            {
+                "branch": [
+                    1,
+                    0,
+                    3
+                ],
+                "charaterName": "c++_idle",
                 "Ctext": "안녕하세요4",
                 "Cvoice": "안녕하세요4",
-                "BG": "기본배경",
-                "ClocationType": 3,
+                "BG": "메인배경",
+                "ClocationType": 1,
                 "eventType": 0
             },
             {
-                "branch": 1,
-                "charaterName": "c++",
+                "branch": [
+                    1,
+                    0,
+                    4
+                ],
+                "charaterName": "c++_idle",
                 "Ctext": "안녕하세요5",
                 "Cvoice": "안녕하세요5",
-                "BG": "기본배경",
-                "ClocationType": 4,
+                "BG": "메인배경",
+                "ClocationType": 1,
                 "eventType": 0
             },
             {
-                "branch": 1,
-                "charaterName": "c++",
+                "branch": [
+                    1,
+                    0,
+                    5
+                ],
+                "charaterName": "c++_idle",
                 "Ctext": "안녕하세요6",
                 "Cvoice": "안녕하세요6",
-                "BG": "기본배경",
+                "BG": "메인배경",
                 "ClocationType": 1,
                 "eventType": 0
             }
         ]
+    },
+    "spriteData": {},
+    "questData": {
+        "questInfo": [
+            {
+                "number": 1,
+                "img": "기본이미지",
+                "title": "퀘스트1",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    80
+                ],
+                "repeat": false
+            },
+            {
+                "number": 2,
+                "img": "기본이미지",
+                "title": "퀘스트2",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    81
+                ],
+                "repeat": false
+            },
+            {
+                "number": 3,
+                "img": "기본이미지",
+                "title": "퀘스트3",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    82
+                ],
+                "repeat": false
+            },
+            {
+                "number": 4,
+                "img": "기본이미지",
+                "title": "퀘스트4",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    83
+                ],
+                "repeat": false
+            },
+            {
+                "number": 5,
+                "img": "기본이미지",
+                "title": "퀘스트5",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    84
+                ],
+                "repeat": false
+            },
+            {
+                "number": 6,
+                "img": "기본이미지",
+                "title": "퀘스트6",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    85
+                ],
+                "repeat": false
+            },
+            {
+                "number": 7,
+                "img": "기본이미지",
+                "title": "퀘스트7",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    86
+                ],
+                "repeat": false
+            },
+            {
+                "number": 8,
+                "img": "기본이미지",
+                "title": "퀘스트8",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    87
+                ],
+                "repeat": false
+            },
+            {
+                "number": 9,
+                "img": "기본이미지",
+                "title": "퀘스트9",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    0
+                ],
+                "condition2": [
+                    3,
+                    88
+                ],
+                "repeat": false
+            },
+            {
+                "number": 10,
+                "img": "기본이미지",
+                "title": "퀘스트10",
+                "content": "이것은 설명이다",
+                "condition1": [
+                    1,
+                    1
+                ],
+                "condition2": [
+                    3,
+                    89
+                ],
+                "repeat": false
+            }
+        ]
+    },
+    "inGameData": {
+        "loadingCnt": 4,
+        "maxCnt": 4
     }
 }
