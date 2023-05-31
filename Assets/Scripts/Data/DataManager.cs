@@ -11,7 +11,7 @@ public class DataManager : MonoBehaviour
     public static DataManager Single;
 
     public GoogleSheetManager googleSheetManager { get; set; } // 스프레드시트에서 데이터를 가져오는 GoogleSheetManager
-    public ResourceDataManager resourceDataManager { get; set; }
+    //public ResourceDataManager resourceDataManager { get; set; } 현실적 이슈로 포기..
 
     void Awake()
     {
@@ -28,13 +28,14 @@ public class DataManager : MonoBehaviour
         jsonManager = new JsonManager();
         data = new SaveDataClass();
         googleSheetManager = new GoogleSheetManager();
-        resourceDataManager = new ResourceDataManager();
+        //resourceDataManager = new ResourceDataManager(); 현실적 이슈로 포기..
 
         Load();
 
         data.inGameData.loadingCnt = 0;
+        data.inGameData.maxCnt = 2;
         googleSheetManager.Single = Single;
-        resourceDataManager.Single = Single;
+        //resourceDataManager.Single = Single; 현실적 이슈로 포기..
         StartCoroutine(LoadAllData());
     }
 
@@ -48,21 +49,23 @@ public class DataManager : MonoBehaviour
         data = jsonManager.LoadSaveData();
     }
 
+    /*
     public void SpriteDataCoroutine(string name, string url)
     {
         StartCoroutine(resourceDataManager.GetTexture(name, url));
-    }
+    } 현실적 이슈로 포기..
+    */
 
+    /*
     public void SpriteDataProcessing(string[] strings)
     {
         StartCoroutine(googleSheetManager.SpriteDataProcessing(strings));
-    }
+    } 현실적 이슈로 포기..
+    */
 
     IEnumerator LoadAllData()
     {
         StartCoroutine(googleSheetManager.GoogleSheetDataSetting(0));
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(googleSheetManager.GoogleSheetDataSetting(1));
         yield return new WaitForSeconds(1f);
         StartCoroutine(googleSheetManager.GoogleSheetDataSetting(2));
     }

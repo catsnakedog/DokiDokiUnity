@@ -9,8 +9,7 @@ public class MainController : MonoBehaviour
     public UIcontroller UI { get; set; }
     public ResourceController resource { get; set; }
 
-
-    void Awake()
+    void Start()
     {
         init();
     }

@@ -6,15 +6,17 @@ using static Define;
 
 public class ResourceController : MonoBehaviour
 {
+    DataManager Single;
     MainController main;
 
     public List<GameObject> UItype { get; set; }
-    public List<Sprite> BG { get; set; }
 
     public void init()
     {
+        Single = DataManager.Single;
+        main = MainController.main;
         UItypeSetting();
-        BGSetting();
+        ImageSetting();
     }
 
     void UItypeSetting()
@@ -26,12 +28,12 @@ public class ResourceController : MonoBehaviour
         }
     }
 
-    void BGSetting()
+    void ImageSetting()
     {
-        BG = new List<Sprite>();
-        for (int i = 0; i < (int)Define.BG.maxCount; i++)
+        Single.data.spriteData.sprite = new Dictionary<string, Sprite>();
+        for (int i = 0; i < (int)Define.AllSprite.maxCount; i++)
         {
-            BG.Add(Resources.Load<Sprite>("BG/" + Enum.GetName(typeof(Define.BG), i)));
+            Single.data.spriteData.sprite.Add(((Define.AllSprite)i).ToString(), Resources.Load<Sprite>("Sprite/" + Enum.GetName(typeof(Define.AllSprite), i)));
         }
     }
 }

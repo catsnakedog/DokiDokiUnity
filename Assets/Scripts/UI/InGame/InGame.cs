@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 using static Define;
@@ -12,9 +14,11 @@ public class InGame : MonoBehaviour
     DataManager Single;
     MainController main;
 
+    public float textShowDelay;
     int number; // 스토리 넘버
     int branch;
     int cnt;
+    bool isTextShow;
     List<TextInfo> crruentBranchTextInfo;
     Dictionary<int, List<TextInfo>> textDict; // 선택지 별로 text를 분리해서 저장해둠
 
@@ -23,6 +27,8 @@ public class InGame : MonoBehaviour
     GameObject textBox; // 테스트가 나오는 박스
     Text content; // 내용
     Text Cname; // 말하는 사람 이름
+
+    Coroutine textCoru;
 
     void Start()
     {
@@ -35,6 +41,8 @@ public class InGame : MonoBehaviour
         Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<Text>();
         number = Single.data.inGameData.number;
         branch = 0;
+        textShowDelay = 0.05f;
+        isTextShow = false;
 
         textBox.GetComponent<Button>().onClick.AddListener(nextText);
 
@@ -44,7 +52,27 @@ public class InGame : MonoBehaviour
 
     void nextText() // 다음 텍스트 실행
     {
-        cnt++;
+        if(cnt == crruentBranchTextInfo.Count - 1 && !isTextShow)
+        {
+            if (crruentBranchTextInfo[cnt].eventType == 0)
+            {
+                GoMain();
+                return;
+            }
+            else
+            {
+                StopCoroutine(textCoru);
+                isTextShow = false;
+                //선택지 관련 스크립트 실행
+                branch = 1; // 임시
+                SettingText();
+                return;
+            }
+        }
+        if(!isTextShow)
+        {
+            cnt++;
+        }
         SettingUI(crruentBranchTextInfo[cnt]);
     }
     
@@ -57,19 +85,32 @@ public class InGame : MonoBehaviour
 
     void SettingUI(TextInfo info)
     {
+        if(!isTextShow)
+        {
+            textCoru = StartCoroutine(TextShow(content, info.Ctext));
+        }
+        else
+        {
+            StopCoroutine(textCoru);
+            content.text = info.Ctext;
+            isTextShow = false;
+        }
         Cname.text = info.charaterName;
-        content.text = info.Ctext;
         BG.GetComponent<Image>().sprite = Single.data.spriteData.sprite[info.BG];
         // 캐릭터 세팅 추가
-        if(info.eventType != 0)
+    }
+
+    IEnumerator TextShow(Text target, string text)
+    {
+        isTextShow = true;
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i<text.Length;i++)
         {
-            SelectUI(info.eventType);
+            yield return new WaitForSeconds(textShowDelay);
+            sb.Append(text[i]);
+            target.text = sb.ToString();
         }
-        if(cnt == crruentBranchTextInfo.Count-1)
-        {
-            Debug.Log("컷씬끝");
-            Invoke("GoMain", 1f);
-        }
+        isTextShow = false;
     }
 
     void GoMain()
@@ -103,7 +144,6 @@ public class InGame : MonoBehaviour
         foreach(TextInfo info in numberText)
         {
             textDict[info.branch[1]].Add(info);
-            Debug.Log("");
         }
     }
 }

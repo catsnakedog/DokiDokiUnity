@@ -28,7 +28,7 @@ public class GoogleSheetManager
         }
         if(page == 1)
         {
-            Single.SpriteDataProcessing(strings);
+            //Single.SpriteDataProcessing(strings); 현실적 이슈로 포기..
         }
         if(page == 2)
         {
@@ -56,8 +56,10 @@ public class GoogleSheetManager
             texts.Add(text);
         }
         Single.data.textData.textInfo = texts;
+        Single.data.inGameData.loadingCnt++;
     }
 
+    /*
     public IEnumerator SpriteDataProcessing(string[] data)
     {
         Single.data.spriteData.sprite.Clear();
@@ -67,7 +69,8 @@ public class GoogleSheetManager
             yield return new WaitForSeconds(1f);
             Single.resourceDataManager.GetSprite(data[2 * i + 0], data[2 * i + 1]);
         }
-    }
+    } 현실적 이슈로 포기..
+    */
 
     void QuestDataProcessing(string[] data)
     {
@@ -100,5 +103,6 @@ public class GoogleSheetManager
             texts.Add(text);
         }
         Single.data.storyData.storyInfo = texts;
+        Single.data.inGameData.loadingCnt++;
     }
 }

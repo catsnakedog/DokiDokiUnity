@@ -1,4 +1,5 @@
-using System.Collections;
+/*
+using System.Collections;                   현실적 이슈로 포기..
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -40,3 +41,4 @@ public class ResourceDataManager
         }
     }
 }
+*/

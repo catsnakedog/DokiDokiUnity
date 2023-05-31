@@ -11,7 +11,7 @@
                     0
                 ],
                 "charaterName": "c++_idle",
-                "Ctext": "안녕하세요1",
+                "Ctext": "안녕하세요1안녕하세요1안녕하세요1안녕하세요1",
                 "Cvoice": "안녕하세요1",
                 "BG": "기본배경_인게임",
                 "ClocationType": 1,
@@ -24,7 +24,7 @@
                     1
                 ],
                 "charaterName": "c++_idle",
-                "Ctext": "안녕하세요2",
+                "Ctext": "안녕하세요2안녕하세요1안녕하세요1안녕하세요1",
                 "Cvoice": "안녕하세요2",
                 "BG": "기본배경_인게임",
                 "ClocationType": 1,
@@ -37,7 +37,7 @@
                     2
                 ],
                 "charaterName": "c++_idle",
-                "Ctext": "안녕하세요3",
+                "Ctext": "안녕하세요3안녕하세요1안녕하세요1안녕하세요1",
                 "Cvoice": "안녕하세요3",
                 "BG": "기본배경_인게임",
                 "ClocationType": 1,
@@ -50,7 +50,7 @@
                     0
                 ],
                 "charaterName": "c++_idle",
-                "Ctext": "안녕하세요4",
+                "Ctext": "안녕하세요4안녕하세요1안녕하세요1안녕하세요1안녕하세요1",
                 "Cvoice": "안녕하세요4",
                 "BG": "기본배경_인게임",
                 "ClocationType": 1,
@@ -63,7 +63,7 @@
                     1
                 ],
                 "charaterName": "c++_idle",
-                "Ctext": "안녕하세요5",
+                "Ctext": "안녕하세요5안녕하세요1안녕하세요1안녕하세요1안녕하세요1",
                 "Cvoice": "안녕하세요5",
                 "BG": "기본배경_인게임",
                 "ClocationType": 1,
@@ -76,7 +76,7 @@
                     2
                 ],
                 "charaterName": "c++_idle",
-                "Ctext": "안녕하세요6",
+                "Ctext": "안녕하세요6안녕하세요1안녕하세요1안녕하세요1",
                 "Cvoice": "안녕하세요6",
                 "BG": "기본배경_인게임",
                 "ClocationType": 1,
@@ -89,7 +89,7 @@
         "storyInfo": [
             {
                 "number": 1,
-                "img": "c#",
+                "img": "cshop",
                 "title": "퀘스트1",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -103,7 +103,7 @@
             },
             {
                 "number": 2,
-                "img": "c#",
+                "img": "cshop",
                 "title": "퀘스트2",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -117,7 +117,7 @@
             },
             {
                 "number": 3,
-                "img": "c#",
+                "img": "cshop",
                 "title": "퀘스트3",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -131,7 +131,7 @@
             },
             {
                 "number": 4,
-                "img": "c#",
+                "img": "cshop",
                 "title": "퀘스트4",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -145,7 +145,7 @@
             },
             {
                 "number": 5,
-                "img": "c#",
+                "img": "cshop",
                 "title": "퀘스트5",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -159,7 +159,7 @@
             },
             {
                 "number": 6,
-                "img": "c#",
+                "img": "cshop",
                 "title": "퀘스트6",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -231,8 +231,8 @@
         ]
     },
     "inGameData": {
-        "loadingCnt": 12,
-        "maxCnt": 12,
+        "loadingCnt": 2,
+        "maxCnt": 2,
         "number": 0
     }
 }

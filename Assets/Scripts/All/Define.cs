@@ -22,10 +22,14 @@ public class Define
         maxCount
     }
 
-    public enum BG
+    public enum AllSprite
     {
-        기본배경,
-        인게임배경,
+        기본배경_로딩,
+        기본배경_인게임,
+        기본배경_미니게임,
+        기본배경_메인,
+        cshop,
+        python,
         maxCount
     }
 }
