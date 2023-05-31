@@ -71,10 +71,10 @@ public class GoogleSheetManager
 
     void QuestDataProcessing(string[] data)
     {
-        List<QuestInfo> texts = new List<QuestInfo>();
+        List<StoryInfo> texts = new List<StoryInfo>();
         for (int i = 0; i < data.Length / 7; i++)
         {
-            QuestInfo text = new QuestInfo();
+            StoryInfo text = new StoryInfo();
             text.number = int.Parse(data[i * 7 + 0]);
             text.img = data[i * 7 + 1];
             text.title = data[i * 7 + 2];
@@ -99,6 +99,6 @@ public class GoogleSheetManager
             }
             texts.Add(text);
         }
-        Single.data.questData.questInfo = texts;
+        Single.data.storyData.storyInfo = texts;
     }
 }

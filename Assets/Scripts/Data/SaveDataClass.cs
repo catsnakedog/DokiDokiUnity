@@ -12,14 +12,14 @@ public class SaveDataClass
     public GameData gameData;
     public TextData textData;
     public SpriteData spriteData;
-    public QuestData questData;
+    public StoryData storyData;
     public InGameData inGameData;
-    public SaveDataClass(GameData gameData, TextData textData, SpriteData spriteData, QuestData questData, InGameData inGameData)
+    public SaveDataClass(GameData gameData, TextData textData, SpriteData spriteData, StoryData storyData, InGameData inGameData)
     {
         this.gameData = gameData;
         this.textData = textData;
         this.spriteData = spriteData;
-        this.questData = questData;
+        this.storyData = storyData;
         this.inGameData = inGameData;
     }
     public SaveDataClass()
@@ -27,7 +27,7 @@ public class SaveDataClass
         this.gameData = new GameData();
         this.textData = new TextData();
         this.spriteData = new SpriteData();
-        this.questData = new QuestData();
+        this.storyData = new StoryData();
         this.inGameData = new InGameData();
     }
 }
@@ -37,11 +37,13 @@ public class InGameData
 {
     public int loadingCnt;
     public int maxCnt;
+    public int number;
 
     public InGameData()
     {
         this.loadingCnt = 0;
         this.maxCnt = 10;
+        this.number = 0;
     }
 }
 
@@ -116,23 +118,23 @@ public class TextInfo
 }
 #endregion
 
-#region QuestData
+#region StoryData
 [System.Serializable]
-public class QuestData
+public class StoryData
 {
-    public List<QuestInfo> questInfo;
-    public QuestData(List<QuestInfo> questInfo)
+    public List<StoryInfo> storyInfo;
+    public StoryData(List<StoryInfo> questInfo)
     {
-        this.questInfo = questInfo;
+        this.storyInfo = questInfo;
     }
-    public QuestData()
+    public StoryData()
     {
-        this.questInfo = new List<QuestInfo>();
+        this.storyInfo = new List<StoryInfo>();
     }
 }
 
 [System.Serializable]
-public class QuestInfo
+public class StoryInfo
 {
     public int number;
     public string img; // n + 캐릭터 이름들? -> 한 변수로 여러명의 캐릭터 입력받기 가능
@@ -142,7 +144,7 @@ public class QuestInfo
     public List<int> condition2;
     public bool repeat; // 여러가지 기능들 짬통 ex 미니게임, 특수효과 등등
     
-    public QuestInfo(int number, string img, string title, string content, List<int> condition1, List<int> condition2, bool repeat)
+    public StoryInfo(int number, string img, string title, string content, List<int> condition1, List<int> condition2, bool repeat)
     {
         this.number = number;
         this.img = img;
@@ -153,7 +155,7 @@ public class QuestInfo
         this.repeat = repeat;
     }
 
-    public QuestInfo()
+    public StoryInfo()
     {
         this.number = 0;
         this.img = "";

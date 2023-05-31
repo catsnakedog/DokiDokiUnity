@@ -768,11 +768,12 @@ MonoBehaviour:
     gameData: {}
     textData:
       textInfo: []
-    questData:
-      questInfo: []
+    storyData:
+      storyInfo: []
     inGameData:
       loadingCnt: 0
       maxCnt: 0
+      number: 0
 --- !u!4 &1809762487
 Transform:
   m_ObjectHideFlags: 0

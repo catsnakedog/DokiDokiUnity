@@ -18,6 +18,7 @@ public class Define
         MiniGame,
         InGame,
         Loading,
+        Story,
         maxCount
     }
 

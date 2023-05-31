@@ -85,11 +85,11 @@
         ]
     },
     "spriteData": {},
-    "questData": {
-        "questInfo": [
+    "storyData": {
+        "storyInfo": [
             {
                 "number": 1,
-                "img": "기본이미지",
+                "img": "c#",
                 "title": "퀘스트1",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -103,7 +103,7 @@
             },
             {
                 "number": 2,
-                "img": "기본이미지",
+                "img": "c#",
                 "title": "퀘스트2",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -117,7 +117,7 @@
             },
             {
                 "number": 3,
-                "img": "기본이미지",
+                "img": "c#",
                 "title": "퀘스트3",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -131,7 +131,7 @@
             },
             {
                 "number": 4,
-                "img": "기본이미지",
+                "img": "c#",
                 "title": "퀘스트4",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -145,7 +145,7 @@
             },
             {
                 "number": 5,
-                "img": "기본이미지",
+                "img": "c#",
                 "title": "퀘스트5",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -159,7 +159,7 @@
             },
             {
                 "number": 6,
-                "img": "기본이미지",
+                "img": "c#",
                 "title": "퀘스트6",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -173,7 +173,7 @@
             },
             {
                 "number": 7,
-                "img": "기본이미지",
+                "img": "python",
                 "title": "퀘스트7",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -187,7 +187,7 @@
             },
             {
                 "number": 8,
-                "img": "기본이미지",
+                "img": "python",
                 "title": "퀘스트8",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -201,7 +201,7 @@
             },
             {
                 "number": 9,
-                "img": "기본이미지",
+                "img": "python",
                 "title": "퀘스트9",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -215,7 +215,7 @@
             },
             {
                 "number": 10,
-                "img": "기본이미지",
+                "img": "python",
                 "title": "퀘스트10",
                 "content": "이것은 설명이다",
                 "condition1": [
@@ -231,7 +231,8 @@
         ]
     },
     "inGameData": {
-        "loadingCnt": 4,
-        "maxCnt": 4
+        "loadingCnt": 6,
+        "maxCnt": 6,
+        "number": 0
     }
 }
