@@ -9,10 +9,10 @@ public class Loading : MonoBehaviour
     DataManager Single;
     MainController mainController;
 
-    GameObject BG;
-    GameObject LoadingBar;
-    Text percent;
-    Text content;
+    GameObject BG; // 배경
+    GameObject LoadingBar; // 로딩바
+    Text percent; // 퍼센트
+    Text content; // 로딩바 위에 모하는 중인지
 
     void Start()
     {

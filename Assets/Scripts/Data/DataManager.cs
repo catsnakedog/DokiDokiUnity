@@ -61,9 +61,9 @@ public class DataManager : MonoBehaviour
     IEnumerator LoadAllData()
     {
         StartCoroutine(googleSheetManager.GoogleSheetDataSetting(0));
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         StartCoroutine(googleSheetManager.GoogleSheetDataSetting(1));
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         StartCoroutine(googleSheetManager.GoogleSheetDataSetting(2));
     }
 }

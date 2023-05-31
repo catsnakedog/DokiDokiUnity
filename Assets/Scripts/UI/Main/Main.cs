@@ -10,11 +10,11 @@ public class Main : MonoBehaviour
     DataManager Single;
     MainController main;
 
-    GameObject BG;
-    GameObject charater;
-    GameObject story;
-    GameObject stat;
-    GameObject content;
+    GameObject BG; // 배경
+    GameObject charater; // 캐릭터
+    GameObject story; // 스토리 목록
+    GameObject stat; // 스탯
+    GameObject content; // 스토리들이 들어갈 content
     void Start()
     {
         Single = DataManager.Single;

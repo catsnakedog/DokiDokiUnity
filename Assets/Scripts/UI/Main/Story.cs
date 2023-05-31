@@ -6,7 +6,7 @@ public class Story : MonoBehaviour
 {
     DataManager Single;
     MainController main;
-    public int number;
+    public int number; // 인게임으로 넘어갈때 스토리 넘버 전달
 
     void Start()
     {
