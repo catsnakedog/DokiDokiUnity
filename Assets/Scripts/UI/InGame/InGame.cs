@@ -54,20 +54,7 @@ public class InGame : MonoBehaviour
     {
         if(cnt == crruentBranchTextInfo.Count - 1 && !isTextShow)
         {
-            if (crruentBranchTextInfo[cnt].eventType == 0)
-            {
-                GoMain();
-                return;
-            }
-            else
-            {
-                StopCoroutine(textCoru);
-                isTextShow = false;
-                //선택지 관련 스크립트 실행
-                branch = 1; // 임시
-                SettingText();
-                return;
-            }
+            SelectUI();
         }
         if(!isTextShow)
         {
@@ -118,11 +105,22 @@ public class InGame : MonoBehaviour
         main.UI.UIsetting(Define.UIlevel.Level1, Define.UItype.Main);
     }
 
-    void SelectUI(int eventType)
+    void SelectUI()
     {
-        // 선택지 관련 함수 실행
-        branch = 1;
-        SettingText(); // 지금은 바로 넣어놨지만 선택지 추가하면 거기서 선택시 호출해서 스킵되는 경우 방지
+        if (crruentBranchTextInfo[cnt].eventType == 0)
+        {
+            GoMain();
+            return;
+        }
+        else
+        {
+            StopCoroutine(textCoru);
+            isTextShow = false;
+            //선택지 관련 스크립트 실행
+            branch = 1; // 임시
+            SettingText();
+            return;
+        }
     }
 
     void GetAllTextData()
