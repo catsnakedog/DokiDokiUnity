@@ -4,12 +4,14 @@ using UnityEngine;
 using System;
 using UnityEngine.Networking;
 using UnityEngine.UIElements;
+using UnityEngine.SocialPlatforms.Impl;
+using System.Runtime.Serialization;
 
 [System.Serializable]
 public class GoogleSheetManager
 {
     public DataManager Single;
-    const string URL = "https://script.google.com/macros/s/AKfycbytSlQ0aqSlIunUutGTm9tUNXmUbF1pDc2nUWCJxxBpjG5vA4KspSqGQOV3eMFar_VM/exec";
+    const string URL = "https://script.google.com/macros/s/AKfycbwoe-XZ-43s_TJzXmN30_QDLldQMoq5e5S4CYYW8fxM5Gu2pqRI5kpLv9hshtGn7fvk/exec";
     string[] strings;
 
     public IEnumerator GoogleSheetDataSetting(int page)
@@ -22,87 +24,111 @@ public class GoogleSheetManager
         string data = www.downloadHandler.text;
         strings = data.Split(',');
 
-        if(page == 0)
+
+        if(page == 3)
+        {
+            ImageDataProcessing(strings);
+        }
+        if(page == 7)
+        {
+            StoryDataProcessing(strings);
+        }
+        if(page == 8)
         {
             TextDataProcessing(strings);
         }
-        if(page == 1)
+        if(page == 9)
         {
-            //Single.SpriteDataProcessing(strings); 현실적 이슈로 포기..
+            SelectDataProcessing(strings);
         }
-        if(page == 2)
+    }
+
+    void StoryDataProcessing(string[] data)
+    {
+        List<StoryInfo> storys = new List<StoryInfo>();
+        for (int i = 0; i < data.Length / 19; i++)
         {
-            QuestDataProcessing(strings);
+            StoryInfo story = new StoryInfo();
+            story.number = int.Parse(data[i * 19 + 0]);
+            story.image = data[i * 19 + 1];
+            story.title = data[i * 19 + 2];
+            story.content = data[i * 19 + 3];
+            for(int j = 0; j < int.Parse(data[i * 19 + 4]); j++)
+            {
+                story.condition1.Add(int.Parse(data[i * 19 + 5 + j]));
+            }
+            for (int j = 0; j < int.Parse(data[i * 19 + 9]); j++)
+            {
+                story.condition1.Add(int.Parse(data[i * 19 + 10 + j]));
+            }
+            for (int j = 0; j < int.Parse(data[i * 19 + 11 + j]); j++)
+            {
+                story.condition1.Add(int.Parse(data[i * 19 + 12 + j]));
+            }
+            storys.Add(story);
         }
+        Single.data.storyData.storyInfo = storys;
+        Single.data.inGameData.loadingCnt++;
     }
 
     void TextDataProcessing(string[] data)
     {
         List<TextInfo> texts = new List<TextInfo>();
-        for(int i=0; i < data.Length/7; i++)
+        for(int i=0; i < data.Length/16; i++)
         {
             TextInfo text = new TextInfo();
-            string[] temps = data[i * 7 + 0].Split('_');
+            string[] temps = data[i * 16 + 0].Split('_');
             foreach(string temp in temps)
             {
                 text.branch.Add(int.Parse(temp));
             }
-            text.charaterName = data[i*7 + 1];
-            text.Ctext = data[i*7 + 2];
-            text.Cvoice = data[i*7 + 3];
-            text.BG = data[i*7 + 4];
-            text.ClocationType = int.Parse(data[i*7 + 5]);
-            text.eventType = int.Parse(data[i*7 + 6]);
+            for (int j = 0; j < int.Parse(data[i * 16 + 1]); j++)
+            {
+                text.charaterName.Add(data[i * 16 + 2 + j]);
+            }
+            for (int j = 0; j < int.Parse(data[i * 16 + 6]); j++)
+            {
+                text.charaterSprite.Add(data[i * 16 + 7 + j]);
+            }
+            text.charaterText = data[i * 16 + 11];
+            text.charaterVoice = data[i * 16 + 12];
+            text.BG = data[i * 16 + 13];
+            text.charaterLocationType = int.Parse(data[i * 16 + 14]);
+            text.selectType = int.Parse(data[i * 16 + 15]);
             texts.Add(text);
         }
         Single.data.textData.textInfo = texts;
         Single.data.inGameData.loadingCnt++;
     }
 
-    /*
-    public IEnumerator SpriteDataProcessing(string[] data)
+    void SelectDataProcessing(string[] data)
     {
-        Single.data.spriteData.sprite.Clear();
-        Single.data.inGameData.maxCnt = data.Length / 2;
-        for (int i = 0; i < data.Length / 2; i++)
+        List<SelectInfo> selects = new List<SelectInfo>();
+        for (int i = 0; i < data.Length / 11; i++)
         {
-            yield return new WaitForSeconds(1f);
-            Single.resourceDataManager.GetSprite(data[2 * i + 0], data[2 * i + 1]);
+            SelectInfo select = new SelectInfo();
+            select.selectType = int.Parse(data[i * 11 + 0]);
+            for (int j = 0; j < int.Parse(data[i * 11 + 1]); j++)
+            {
+                select.selectText.Add(data[i * 11 + 2 + j]);
+            }
+            for (int j = 0; j < int.Parse(data[i * 11 + 6]); j++)
+            {
+                select.branchChange.Add(int.Parse(data[i * 11 + 7 + j]));
+            }
+            selects.Add(select);
         }
-    } 현실적 이슈로 포기..
-    */
+        Single.data.selectData.selectInfo = selects;
+        Single.data.inGameData.loadingCnt++;
+    }
 
-    void QuestDataProcessing(string[] data)
+    void ImageDataProcessing(string[] data)
     {
-        List<StoryInfo> texts = new List<StoryInfo>();
-        for (int i = 0; i < data.Length / 7; i++)
+        Single.data.spriteData.sprite = new Dictionary<string, Sprite>();
+        for (int i = 0; i < data.Length; i++)
         {
-            StoryInfo text = new StoryInfo();
-            text.number = int.Parse(data[i * 7 + 0]);
-            text.img = data[i * 7 + 1];
-            text.title = data[i * 7 + 2];
-            text.content = data[i * 7 + 3];
-            string[] temps = data[i * 7 + 4].Split('_');
-            foreach (string temp in temps)
-            {
-                text.condition1.Add(int.Parse(temp));
-            }
-            temps = data[i * 7 + 5].Split('_');
-            foreach (string temp in temps)
-            {
-                text.condition2.Add(int.Parse(temp));
-            }
-            if (data[i * 7 + 6] == "0")
-            {
-                text.repeat = false;
-            }
-            else
-            {
-                text.repeat = true;
-            }
-            texts.Add(text);
+            Single.data.spriteData.sprite.Add(data[i], Resources.Load<Sprite>("Sprite/" + data[i]));
         }
-        Single.data.storyData.storyInfo = texts;
         Single.data.inGameData.loadingCnt++;
     }
 }

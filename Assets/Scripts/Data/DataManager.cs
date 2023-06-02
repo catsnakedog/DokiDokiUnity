@@ -33,7 +33,7 @@ public class DataManager : MonoBehaviour
         Load();
 
         data.inGameData.loadingCnt = 0;
-        data.inGameData.maxCnt = 2;
+        data.inGameData.maxCnt = 4;
         googleSheetManager.Single = Single;
         //resourceDataManager.Single = Single; 현실적 이슈로 포기..
         StartCoroutine(LoadAllData());
@@ -65,8 +65,12 @@ public class DataManager : MonoBehaviour
 
     IEnumerator LoadAllData()
     {
-        StartCoroutine(googleSheetManager.GoogleSheetDataSetting(0));
+        StartCoroutine(googleSheetManager.GoogleSheetDataSetting(3));
         yield return new WaitForSeconds(1f);
-        StartCoroutine(googleSheetManager.GoogleSheetDataSetting(2));
+        StartCoroutine(googleSheetManager.GoogleSheetDataSetting(7));
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(googleSheetManager.GoogleSheetDataSetting(8));
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(googleSheetManager.GoogleSheetDataSetting(9));
     }
 }

@@ -19,17 +19,7 @@ public class Define
         InGame,
         Loading,
         Story,
-        maxCount
-    }
-
-    public enum AllSprite
-    {
-        기본배경_로딩,
-        기본배경_인게임,
-        기본배경_미니게임,
-        기본배경_메인,
-        cshop,
-        python,
+        Select,
         maxCount
     }
 }

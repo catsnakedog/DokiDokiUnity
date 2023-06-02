@@ -41,7 +41,7 @@ public class Main : MonoBehaviour
             Story storyCom = temp.AddComponent<Story>();
             storyCom.number = info.number;
             temp.transform.SetParent(content.transform, false);
-            temp.transform.GetChild(0).GetComponent<Image>().sprite = Single.data.spriteData.sprite[info.img];
+            temp.transform.GetChild(0).GetComponent<Image>().sprite = Single.data.spriteData.sprite[info.image];
             temp.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = info.title;
             temp.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = info.content;
             temp.GetComponent<Button>().onClick.AddListener(storyCom.InGameStart);

@@ -13,13 +13,15 @@ public class SaveDataClass
     public TextData textData;
     public SpriteData spriteData;
     public StoryData storyData;
+    public SelectData selectData;
     public InGameData inGameData;
-    public SaveDataClass(GameData gameData, TextData textData, SpriteData spriteData, StoryData storyData, InGameData inGameData)
+    public SaveDataClass(GameData gameData, TextData textData, SpriteData spriteData, StoryData storyData, SelectData selectData, InGameData inGameData)
     {
         this.gameData = gameData;
         this.textData = textData;
         this.spriteData = spriteData;
         this.storyData = storyData;
+        this.selectData = selectData;
         this.inGameData = inGameData;
     }
     public SaveDataClass()
@@ -28,10 +30,12 @@ public class SaveDataClass
         this.textData = new TextData();
         this.spriteData = new SpriteData();
         this.storyData = new StoryData();
+        this.selectData = new SelectData();
         this.inGameData = new InGameData();
     }
 }
 
+#region InGameData
 [System.Serializable]
 public class InGameData
 {
@@ -46,6 +50,7 @@ public class InGameData
         this.number = 0;
     }
 }
+#endregion
 
 #region GameData
 [System.Serializable]
@@ -88,33 +93,35 @@ public class TextData
 public class TextInfo
 {
     public List<int> branch;
-    public string charaterName; // n + 캐릭터 이름들? -> 한 변수로 여러명의 캐릭터 입력받기 가능
-    public string Ctext;
-    public string Cvoice;
+    public List<string> charaterName;
+    public List<string> charaterSprite;
+    public string charaterText;
+    public string charaterVoice;
     public string BG;
-    public int ClocationType;
-    public int eventType; // 여러가지 기능들 짬통 ex 미니게임, 특수효과 등등
-    public TextInfo(List<int> branch, string charaterName, string Ctext, string Cvoice, string BG, int ClocationType, int eventType)
+    public int charaterLocationType;
+    public int selectType;
+    public TextInfo(List<int> branch, List<string> charaterName, List<string> charaterSprtie,string charaterText, string charaterVoice, string BG, int charaterLocationType, int selectType)
     {
         this.branch = branch;
         this.charaterName = charaterName;
-        this.Ctext = Ctext;
-        this.Cvoice = Cvoice;
+        this.charaterText = charaterText;
+        this.charaterVoice = charaterVoice;
         this.BG = BG;
-        this.ClocationType = ClocationType;
-        this.eventType = eventType;
+        this.charaterLocationType = charaterLocationType;
+        this.selectType = selectType;
     }
 
     public TextInfo()
     {
         this.branch = new List<int>();
-        this.charaterName = "";
-        this.Ctext = "";
-        this.Cvoice = "";
+        this.charaterName = new List<string>();
+        this.charaterSprite = new List<string>();
+        this.charaterText = "";
+        this.charaterVoice = "";
         this.BG = "";
-        this.ClocationType = 0;
-        this.eventType = 0;
-    }
+        this.charaterLocationType = 0;
+        this.selectType = 0;
+}
 }
 #endregion
 
@@ -137,35 +144,73 @@ public class StoryData
 public class StoryInfo
 {
     public int number;
-    public string img; // n + 캐릭터 이름들? -> 한 변수로 여러명의 캐릭터 입력받기 가능
+    public string image; // n + 캐릭터 이름들? -> 한 변수로 여러명의 캐릭터 입력받기 가능
     public string title;
     public string content;
     public List<int> condition1;
     public List<int> condition2;
-    public bool repeat; // 여러가지 기능들 짬통 ex 미니게임, 특수효과 등등
+    public List<int> condition3;
     
-    public StoryInfo(int number, string img, string title, string content, List<int> condition1, List<int> condition2, bool repeat)
+    public StoryInfo(int number, string image, string title, string content, List<int> condition1, List<int> condition2, List<int> condition3)
     {
         this.number = number;
-        this.img = img;
+        this.image = image;
         this.title = title;
         this.content = content;
         this.condition1 = condition1;
         this.condition2 = condition2;
-        this.repeat = repeat;
+        this.condition3 = condition3;
     }
 
     public StoryInfo()
     {
         this.number = 0;
-        this.img = "";
+        this.image = "";
         this.title = "";
         this.content = "";
         this.condition1 = new List<int>();
         this.condition2 = new List<int>();
-        this.repeat = false;
+        this.condition3 = new List<int>();
     }
 }
+#endregion
+
+#region SelectData
+[System.Serializable]
+public class SelectData
+{
+    public List<SelectInfo> selectInfo;
+    public SelectData(List<SelectInfo> selectInfo)
+    {
+        this.selectInfo = selectInfo;
+    }
+    public SelectData()
+    {
+        this.selectInfo = new List<SelectInfo>();
+    }
+}
+[System.Serializable]
+public class SelectInfo
+{
+    public int selectType;
+    public List<string> selectText;
+    public List<int> branchChange;
+
+    public SelectInfo(int selectType, List<string> selectText, List<int> branchChange)
+    {
+        this.selectType = selectType;
+        this.selectText = selectText;
+        this.branchChange = branchChange;
+    }
+
+    public SelectInfo()
+    {
+        this.selectType = 0;
+        this.selectText = new List<string>();
+        this.branchChange = new List<int>();
+    }
+}
+
 #endregion
 
 #region SpriteData
