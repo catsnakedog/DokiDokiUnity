@@ -453,6 +453,294 @@
                 "BG": "기본배경_인게임",
                 "charaterLocationType": 1,
                 "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    0
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "(홍익대학교 컴퓨터실)",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    1
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "드디어 개강인가",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    2
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "내이름은 유니티 21살.",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    3
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "홍대대학교 자율전공학부에 재학중인 지극히 평범한.. 학생이다.",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    4
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "1학년 때는 학과 사람들과 대화를 해본 횟수가 셀 수 없을 정도..",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    5
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "왜 why? 아무도 말을 걸어주지도 걸어보지도 않았으니까..",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    6
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "동아리같은 대외활동은 커녕 아직 진입할 학과를 제대로 정하지도 못해 과 생활도 개판이 난 상황이다..",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    7
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "하지만! 올해의 나는 다르다.",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    8
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "올해는 공부에만 집중해서 모든 분야를 평정하고 우수한 성적으로 과 진입은 물론 과탑이 되고 말 것이다!",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    9
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "누구는 대학에서 한강 나들이를.",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    10
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "누구는 대학에서 연애를 한다지만.",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    11
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "난 괜찮다.(또르륵)",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    12
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "왜냐하면....",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    13
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "나에겐 겐신의 에이추 누나가 있으니까!!(퍽!!)",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    14
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "에이추 누나같은 사람은 현실에 존재하지 않는다는 걸 알기 때문에..",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    15
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "어디에도 눈 돌리지 않고 오직 나의 완벽한 커리어 쌓기에만 집중할 것이다.",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    16
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "에이추 누나.. 내가 이 학교를 졸업해서 대기업에 취업한다면 영원히 누나와 함께할 수 있어..",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
+            },
+            {
+                "branch": [
+                    8,
+                    0,
+                    17
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterText": "조금만 기다려줘!!!!!",
+                "charaterVoice": "null",
+                "BG": "컴퓨터실",
+                "charaterLocationType": 1,
+                "selectType": 0
             }
         ]
     },
@@ -521,6 +809,15 @@
                 "condition1": [
                     6
                 ],
+                "condition2": [],
+                "condition3": []
+            },
+            {
+                "number": 8,
+                "image": "c#",
+                "title": "자기소개",
+                "content": "학기초 자기 소개를 해보자",
+                "condition1": [],
                 "condition2": [],
                 "condition3": []
             }
