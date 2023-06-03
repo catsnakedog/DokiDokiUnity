@@ -16,11 +16,17 @@
                 "charaterSprite": [
                     "python_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "테스트 내용입니다 어느정도 길이가 있어야지 테스트가 가능하니 아무말이나 적어두겠습니다 감사합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -34,12 +40,18 @@
                 ],
                 "charaterSprite": [
                     "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
                 ],
                 "charaterText": "또 다른 테스트 내용입니다 전꺼와 같다면 테스트가 안됨으로 곂치지 않는 아무말이나 적어두겠습니다 감사합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -54,11 +66,17 @@
                 "charaterSprite": [
                     "python_idle"
                 ],
+                "charaterLocationType": [
+                    5
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
                 "BGChangeEffect": 0
             },
             {
@@ -68,16 +86,26 @@
                     3
                 ],
                 "charaterName": [
-                    "python"
+                    "python",
+                    "java"
                 ],
                 "charaterSprite": [
-                    "python_idle"
+                    "python_idle",
+                    "java_idle"
+                ],
+                "charaterLocationType": [
+                    5,
+                    1
+                ],
+                "charaterScale": [
+                    1.0,
+                    1.0
                 ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
                 "BGChangeEffect": 0
             },
             {
@@ -92,11 +120,17 @@
                 "charaterSprite": [
                     "python_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -111,11 +145,17 @@
                 "charaterSprite": [
                     "python_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 2,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -129,12 +169,18 @@
                 ],
                 "charaterSprite": [
                     "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
                 ],
                 "charaterText": "1번 테스트~~~~~",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -148,12 +194,18 @@
                 ],
                 "charaterSprite": [
                     "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
                 ],
                 "charaterText": "1번테스트 2~~~~~~~~~",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -167,12 +219,18 @@
                 ],
                 "charaterSprite": [
                     "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
                 ],
                 "charaterText": "2번 테스트~~~~~~~~~~~",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -187,11 +245,17 @@
                 "charaterSprite": [
                     "python_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "2번 테스트~~~~~~~~~~~~~~",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -206,11 +270,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -225,11 +295,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -244,11 +320,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -263,11 +345,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -282,11 +370,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -301,11 +395,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -320,11 +420,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -339,11 +445,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -358,11 +470,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -377,11 +495,17 @@
                 "charaterSprite": [
                     "c#_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -396,11 +520,17 @@
                 "charaterSprite": [
                     "c++_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -415,11 +545,17 @@
                 "charaterSprite": [
                     "c_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -434,11 +570,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -453,11 +595,17 @@
                 "charaterSprite": [
                     "java_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -472,11 +620,17 @@
                 "charaterSprite": [
                     "java_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -489,11 +643,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "(홍익대학교 컴퓨터실)",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -506,11 +666,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "드디어 개강인가",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -523,11 +689,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "내이름은 유니티 21살.",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -540,11 +712,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "홍대대학교 자율전공학부에 재학중인 지극히 평범한.. 학생이다.",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -557,11 +735,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "1학년 때는 학과 사람들과 대화를 해본 횟수가 셀 수 없을 정도..",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -574,11 +758,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "왜 why? 아무도 말을 걸어주지도 걸어보지도 않았으니까..",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -591,11 +781,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "동아리같은 대외활동은 커녕 아직 진입할 학과를 제대로 정하지도 못해 과 생활도 개판이 난 상황이다..",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -608,11 +804,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "하지만! 올해의 나는 다르다.",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -625,11 +827,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "올해는 공부에만 집중해서 모든 분야를 평정하고 우수한 성적으로 과 진입은 물론 과탑이 되고 말 것이다!",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -642,11 +850,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "누구는 대학에서 한강 나들이를.",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -659,11 +873,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "누구는 대학에서 연애를 한다지만.",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -676,11 +896,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "난 괜찮다.(또르륵)",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -693,11 +919,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "왜냐하면....",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -710,11 +942,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "나에겐 겐신의 에이추 누나가 있으니까!!(퍽!!)",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -727,11 +965,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "에이추 누나같은 사람은 현실에 존재하지 않는다는 걸 알기 때문에..",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -744,11 +988,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "어디에도 눈 돌리지 않고 오직 나의 완벽한 커리어 쌓기에만 집중할 것이다.",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -761,11 +1011,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "에이추 누나.. 내가 이 학교를 졸업해서 대기업에 취업한다면 영원히 누나와 함께할 수 있어..",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -778,11 +1034,17 @@
                     "unity"
                 ],
                 "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "조금만 기다려줘!!!!!",
                 "charaterVoice": "null",
-                "BG": "컴퓨터실",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "컴퓨터실",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -797,11 +1059,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용1",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -816,11 +1084,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용2",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -835,11 +1109,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용3",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -854,11 +1134,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용4",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -870,14 +1156,18 @@
                 "charaterName": [
                     "html"
                 ],
-                "charaterSprite": [
-                    "html_idle"
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    0
+                ],
+                "charaterScale": [
+                    1.0
                 ],
                 "charaterText": "컷씬 테스트용5",
                 "charaterVoice": "null",
-                "BG": "html_cutScene_1",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "html_cutScene_1",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 2
             },
             {
@@ -892,11 +1182,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용6",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -911,11 +1207,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용7",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -927,14 +1229,18 @@
                 "charaterName": [
                     "html"
                 ],
-                "charaterSprite": [
-                    "html_idle"
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    0
+                ],
+                "charaterScale": [
+                    1.0
                 ],
                 "charaterText": "컷씬 테스트용8",
                 "charaterVoice": "null",
-                "BG": "html_cutScene_2",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "html_cutScene_2",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 2
             },
             {
@@ -949,11 +1255,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용9",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -968,11 +1280,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용10",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
@@ -987,11 +1305,17 @@
                 "charaterSprite": [
                     "html_idle"
                 ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
                 "charaterText": "컷씬 테스트용11",
                 "charaterVoice": "null",
-                "BG": "기본배경_인게임",
-                "charaterLocationType": 1,
                 "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             }
         ]
@@ -1147,6 +1471,7 @@
     "inGameData": {
         "loadingCnt": 4,
         "maxCnt": 4,
-        "number": 0
+        "number": 0,
+        "clearStory": []
     }
 }

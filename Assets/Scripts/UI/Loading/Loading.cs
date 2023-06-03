@@ -34,12 +34,29 @@ public class Loading : MonoBehaviour
         percent.text = ((float)Single.data.inGameData.loadingCnt / (float)Single.data.inGameData.maxCnt * 100).ToString() + "%";
         content.text = "이미지를 불러오는중~";
         LoadingBar.GetComponent<Slider>().value = (float)Single.data.inGameData.loadingCnt / (float)Single.data.inGameData.maxCnt;
+
         if (Single.data.inGameData.loadingCnt == Single.data.inGameData.maxCnt)
         {
             content.text = "로딩완료";
             Single.Save();
             mainController.UI.UIsetting(Define.UIlevel.Level1, Define.UItype.Main);
             Destroy(gameObject);
+        }
+
+        switch (Single.data.inGameData.loadingCnt)
+        {
+            case 1:
+                content.text = "이미지 데이터를 가져오는중";
+                return;
+            case 2:
+                content.text = "스토리 데이터를 가져오는중";
+                return;
+            case 3:
+                content.text = "텍스트 데이터를 가져오는중";
+                return;
+            case 4:
+                content.text = "선택지 데이터를 가져오는중";
+                return;
         }
     }
 }

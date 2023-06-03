@@ -20,6 +20,7 @@ public class Define
         Loading,
         Story,
         Select,
+        Charater,
         maxCount
     }
 }

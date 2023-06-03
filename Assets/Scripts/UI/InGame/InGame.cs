@@ -1,9 +1,12 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
+using Unity.Mathematics;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,8 +27,11 @@ public class InGame : MonoBehaviour
     int cnt;
     bool isTextShow;
     bool isBGChange;
+    bool isCharaterChange;
     List<TextInfo> crruentBranchTextInfo;
+    List<string> crruentIamgeList = new List<string>();
     Dictionary<int, List<TextInfo>> textDict; // 선택지 별로 text를 분리해서 저장해둠
+    Dictionary<string, GameObject> imageDict;
 
     Image defaultBG;
     Image BG; // 배경
@@ -36,6 +42,7 @@ public class InGame : MonoBehaviour
     Text Cname; // 말하는 사람 이름
 
     Coroutine textCoru;
+    Coroutine imageCoru;
 
     void Start()
     {
@@ -43,8 +50,8 @@ public class InGame : MonoBehaviour
         main = MainController.main;
         defaultBG = transform.GetChild(0).GetComponent<Image>();
         BG = transform.GetChild(1).GetComponent<Image>();
-        textBox = transform.GetChild(2).gameObject;
-        Ch = transform.GetChild(3).gameObject;
+        Ch = transform.GetChild(2).gameObject;
+        textBox = transform.GetChild(3).gameObject;
         select = transform.GetChild(4).gameObject;
         content = textBox.transform.GetChild(0).GetComponent<Text>();
         Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<Text>();
@@ -102,7 +109,15 @@ public class InGame : MonoBehaviour
         else
         {
             StopCoroutine(textCoru);
+            if(imageCoru != null)
+            {
+                StopCoroutine(imageCoru);
+            }
             content.text = info.charaterText;
+            foreach(string temp in crruentIamgeList)
+            {
+                imageDict[temp].GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            }
             isTextShow = false;
         }
         Cname.text = info.charaterName[0]; // 임시값
@@ -110,7 +125,82 @@ public class InGame : MonoBehaviour
         defaultBG.sprite = BG.sprite;
         isBGChange = true;
         StartCoroutine("ChangeBG" + info.BGChangeEffect);
-        // 캐릭터 세팅 추가
+        CharaterSetting(info);
+    }
+
+    void CharaterSetting(TextInfo info)
+    {
+        List<string> imageList = new List<string>();
+        for(int i = 0; i < info.charaterSprite.Count; i++)
+        {
+            imageList.Add(info.charaterSprite[i]);
+            Vector3 location = GetCharaterLocation(info.charaterLocationType[i]);
+            GameObject temp = imageDict[info.charaterSprite[i]];
+            if ((temp.transform.localPosition == location) && (temp.transform.localScale == new Vector3(info.charaterScale[i], info.charaterScale[i], 1f)))
+            {
+                continue;
+            }
+            temp.SetActive(false);
+            temp.transform.localPosition = location;
+            temp.transform.localScale = new Vector3(info.charaterScale[i], info.charaterScale[i], 1f);
+            ImageEffect(temp.GetComponent<Image>(), info);
+        }
+        foreach(string temp in crruentIamgeList)
+        {
+            if(!imageList.Contains(temp))
+            {
+                imageDict[temp].SetActive(false);
+            }
+        }
+        crruentIamgeList = imageList;
+    }
+
+    void ImageEffect(Image image, TextInfo info)
+    {
+        Color color1 = image.color;
+        color1.a = 0;
+        image.color = color1;
+        image.gameObject.SetActive(true);
+        imageCoru = StartCoroutine("ChangeImage" + info.charaterChangeEffect, image);
+    }
+
+    IEnumerator ChangeImage0(Image image)
+    {
+        Color color1 = image.color;
+        color1.a = 1f;
+        yield return new WaitForSeconds(0f);
+        image.color = color1;
+    }
+    IEnumerator ChangeImage1(Image image)
+    {
+        Color color1 = image.color;
+        for (int i = 0; i < (float)charaterChangeSpeed; i++)
+        {
+            color1.a += 1 / (float)charaterChangeSpeed;
+            image.color = color1;
+            yield return new WaitForSeconds(charaterChangeSecond / (float)charaterChangeSpeed);
+        }
+    }
+
+    Vector3 GetCharaterLocation(int n)
+    {
+        switch(n)
+        {
+            case 0:
+                return new Vector3(-750f, 0f, 0f);
+            case 1:
+                return new Vector3(-500f, 0f, 0f);
+            case 2:
+                return new Vector3(-250f, 0f, 0f);
+            case 3:
+                return new Vector3(0f, 0f, 0f);
+            case 4:
+                return new Vector3(250f, 0f, 0f);
+            case 5:
+                return new Vector3(500f, 0f, 0f);
+            default:
+                return new Vector3(0f, 0f, 0f);
+        }
     }
 
     IEnumerator ChangeBG0()
@@ -126,10 +216,10 @@ public class InGame : MonoBehaviour
         color1.a = 0f;
         color2.a = 1f;
         BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
-        for (int i = 0; i < BGChangeSpeed / BGChangeSecond; i++)
+        for (int i = 0; i < 1 / (float)BGChangeSpeed; i++)
         {
-            color1.a += BGChangeSecond / (float)BGChangeSpeed;
-            color2.a -= BGChangeSecond / (float)BGChangeSpeed;
+            color1.a += 1 / (float)BGChangeSpeed;
+            color2.a -= 1 / (float)BGChangeSpeed;
             BG.color = color1;
             defaultBG.color = color2;
             yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
@@ -144,26 +234,21 @@ public class InGame : MonoBehaviour
         color1.a = 0f;
         BG.color = color1;
         BG.sprite = Single.data.spriteData.sprite["하얀배경"];
-        for (int i = 0; i < BGChangeSpeed / BGChangeSecond; i++)
+        for (int i = 0; i < (float)BGChangeSpeed; i++)
         {
-            color1.a += BGChangeSecond / (float)BGChangeSpeed;
+            color1.a += 1 / (float)BGChangeSpeed;
             BG.color = color1;
             yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
         }
         defaultBG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
-        for (int i = 0; i < BGChangeSpeed / BGChangeSecond; i++)
+        for (int i = 0; i < (float)BGChangeSpeed; i++)
         {
-            color1.a -= BGChangeSecond / (float)BGChangeSpeed;
+            color1.a -= 1 / (float)BGChangeSpeed;
             BG.color = color1;
             yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
         }
         BG.sprite = defaultBG.sprite;
         isBGChange = false;
-    }
-
-    IEnumerator ShowCharater()
-    {
-        yield return new WaitForSeconds(0.1f);
     }
 
     IEnumerator TextShow(Text target, string text)
@@ -181,6 +266,7 @@ public class InGame : MonoBehaviour
 
     void GoMain()
     {
+        Single.data.inGameData.clearStory.Add(number);
         main.UI.UIsetting(Define.UIlevel.Level1, Define.UItype.Main);
     }
 
@@ -240,8 +326,10 @@ public class InGame : MonoBehaviour
 
     void GetAllTextData()
     {
+        List<string> imageList = new List<string>();
         List<TextInfo> numberText = new List<TextInfo>();
         textDict = new Dictionary<int, List<TextInfo>>();
+        imageDict = new Dictionary<string, GameObject>();
 
         foreach (TextInfo info in Single.data.textData.textInfo)
         {
@@ -256,7 +344,26 @@ public class InGame : MonoBehaviour
         }
         foreach(TextInfo info in numberText)
         {
+            foreach(string temp in info.charaterSprite)
+            {
+                if(!imageList.Contains(temp))
+                {
+                    imageList.Add(temp);
+                    ImagePool(temp);
+                }
+            }
             textDict[info.branch[1]].Add(info);
         }
+    }
+
+    void ImagePool(string temp)
+    {
+        GameObject tempObject = Instantiate(main.resource.UItype[(int)Define.UItype.Charater], new Vector3(0f, 0f, 0f), quaternion.identity);
+        Sprite image = Single.data.spriteData.sprite[temp];
+        tempObject.GetComponent<RectTransform>().sizeDelta = new Vector2(image.bounds.size.x * 100, image.bounds.size.y * 100);
+        tempObject.GetComponent<Image>().sprite = image;
+        tempObject.transform.SetParent(Ch.transform, false);
+        imageDict.Add(temp, tempObject);
+        tempObject.SetActive(false);
     }
 }

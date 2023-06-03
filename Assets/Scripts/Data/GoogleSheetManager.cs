@@ -74,7 +74,7 @@ public class GoogleSheetManager
 
     void TextDataProcessing(string[] data)
     {
-        int num = 17;
+        int num = 25;
         List<TextInfo> texts = new List<TextInfo>();
         for(int i=0; i < data.Length / num; i++)
         {
@@ -84,20 +84,24 @@ public class GoogleSheetManager
             {
                 text.branch.Add(int.Parse(temp));
             }
-            for (int j = 0; j < int.Parse(data[i * num + 1]); j++)
+            int charCount = int.Parse(data[i * num + 1]);
+            int charSprite = int.Parse(data[i * num + 2]);
+            for(int j = 0; j < charCount; j++)
             {
-                text.charaterName.Add(data[i * num + 2 + j]);
+                text.charaterName.Add(data[i * num + 3 + j * 4]);
+                text.charaterLocationType.Add(int.Parse(data[i * num + 5 + j * 4]));
+                text.charaterScale.Add(float.Parse(data[i * num + 6 + j * 4]));
             }
-            for (int j = 0; j < int.Parse(data[i * num + 6]); j++)
+            for(int j = 0; j < charSprite; j++)
             {
-                text.charaterSprite.Add(data[i * num + 7 + j]);
+                text.charaterSprite.Add(data[i * num + 4 + j * 4]);
             }
-            text.charaterText = data[i * num + 11];
-            text.charaterVoice = data[i * num + 12];
-            text.BG = data[i * num + 13];
-            text.charaterLocationType = int.Parse(data[i * num + 14]);
-            text.selectType = int.Parse(data[i * num + 15]);
-            text.BGChangeEffect = int.Parse(data[i * num + 16]);
+            text.charaterText = data[i * num + 19];
+            text.charaterVoice = data[i * num + 20];
+            text.selectType = int.Parse(data[i * num + 21]);
+            text.BG = data[i * num + 22];
+            text.charaterChangeEffect = int.Parse(data[i * num + 23]);
+            text.BGChangeEffect = int.Parse(data[i * num + 24]);
             texts.Add(text);
         }
         Single.data.textData.textInfo = texts;

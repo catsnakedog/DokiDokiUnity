@@ -36,6 +36,21 @@ public class Main : MonoBehaviour
         content.GetComponent<RectTransform>().sizeDelta = new Vector2(content.GetComponent<RectTransform>().sizeDelta.x, maxCnt * 170 + 100);
         foreach (StoryInfo info in Single.data.storyData.storyInfo)
         {
+            bool pass = true;
+            if (Single.data.inGameData.clearStory.Contains(info.number)) continue;
+            foreach (int condition in info.condition1)
+            {
+                if (!Single.data.inGameData.clearStory.Contains(condition)) pass = false;
+            }
+            foreach (int condition in info.condition2)
+            {
+                if (!Single.data.inGameData.clearStory.Contains(condition)) pass = false;
+            }
+            foreach (int condition in info.condition3)
+            {
+                if (!Single.data.inGameData.clearStory.Contains(condition)) pass = false;
+            }
+            if (!pass) continue;
             cnt++;
             temp = Instantiate<GameObject>(main.resource.UItype[(int)Define.UItype.Story], new Vector3(0f, -50f + (cnt - 1) * -170f, 0f), Quaternion.identity);
             Story storyCom = temp.AddComponent<Story>();

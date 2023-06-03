@@ -42,12 +42,18 @@ public class InGameData
     public int loadingCnt;
     public int maxCnt;
     public int number;
+    public List<int> clearStory;
 
+    public InGameData(List<int> clearStory)
+    {
+        this.clearStory = clearStory;
+    }
     public InGameData()
     {
         this.loadingCnt = 0;
         this.maxCnt = 10;
         this.number = 0;
+        this.clearStory = new List<int>();
     }
 }
 #endregion
@@ -95,22 +101,27 @@ public class TextInfo
     public List<int> branch;
     public List<string> charaterName;
     public List<string> charaterSprite;
+    public List<int> charaterLocationType;
+    public List<float> charaterScale;
     public string charaterText;
     public string charaterVoice;
-    public string BG;
-    public int charaterLocationType;
     public int selectType;
+    public string BG;
+    public int charaterChangeEffect;
     public int BGChangeEffect;
-    public TextInfo(List<int> branch, List<string> charaterName, List<string> charaterSprtie,string charaterText, string charaterVoice, string BG, int charaterLocationType, int selectType, int BGChangeEffect)
+    public TextInfo(List<int> branch, List<string> charaterName, List<string> charaterSprite, List<int> charaterLocationType, List<float> charaterScale, string charaterText, string charaterVoice, int selectType, string BG, int BGChangeEffect, int charaterChangeEffect)
     {
         this.branch = branch;
         this.charaterName = charaterName;
+        this.charaterSprite = charaterSprite;
+        this.charaterLocationType = charaterLocationType;
+        this.charaterScale = charaterScale;
         this.charaterText = charaterText;
         this.charaterVoice = charaterVoice;
-        this.BG = BG;
-        this.charaterLocationType = charaterLocationType;
         this.selectType = selectType;
+        this.BG = BG;
         this.BGChangeEffect = BGChangeEffect;
+        this.charaterChangeEffect = charaterChangeEffect;
     }
 
     public TextInfo()
@@ -118,11 +129,13 @@ public class TextInfo
         this.branch = new List<int>();
         this.charaterName = new List<string>();
         this.charaterSprite = new List<string>();
+        this.charaterLocationType = new List<int>();
+        this.charaterScale = new List<float>();
         this.charaterText = "";
         this.charaterVoice = "";
-        this.BG = "";
-        this.charaterLocationType = 0;
         this.selectType = 0;
+        this.BG = "";
+        this.charaterChangeEffect = 0;
         this.BGChangeEffect = 0;
     }
 }
