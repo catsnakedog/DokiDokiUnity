@@ -100,7 +100,8 @@ public class TextInfo
     public string BG;
     public int charaterLocationType;
     public int selectType;
-    public TextInfo(List<int> branch, List<string> charaterName, List<string> charaterSprtie,string charaterText, string charaterVoice, string BG, int charaterLocationType, int selectType)
+    public int BGChangeEffect;
+    public TextInfo(List<int> branch, List<string> charaterName, List<string> charaterSprtie,string charaterText, string charaterVoice, string BG, int charaterLocationType, int selectType, int BGChangeEffect)
     {
         this.branch = branch;
         this.charaterName = charaterName;
@@ -109,6 +110,7 @@ public class TextInfo
         this.BG = BG;
         this.charaterLocationType = charaterLocationType;
         this.selectType = selectType;
+        this.BGChangeEffect = BGChangeEffect;
     }
 
     public TextInfo()
@@ -121,7 +123,8 @@ public class TextInfo
         this.BG = "";
         this.charaterLocationType = 0;
         this.selectType = 0;
-}
+        this.BGChangeEffect = 0;
+    }
 }
 #endregion
 

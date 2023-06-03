@@ -17,12 +17,18 @@ public class InGame : MonoBehaviour
     public float textShowDelay;
     int number; // 스토리 넘버
     public int branch;
+    public int BGChangeSpeed;
+    public float BGChangeSecond;
+    public int charaterChangeSpeed;
+    public float charaterChangeSecond;
     int cnt;
     bool isTextShow;
+    bool isBGChange;
     List<TextInfo> crruentBranchTextInfo;
     Dictionary<int, List<TextInfo>> textDict; // 선택지 별로 text를 분리해서 저장해둠
 
-    GameObject BG; // 배경
+    Image defaultBG;
+    Image BG; // 배경
     GameObject Ch; // 캐릭터 이미지들이 들어가는 오브젝트
     GameObject textBox; // 테스트가 나오는 박스
     GameObject select;
@@ -35,10 +41,11 @@ public class InGame : MonoBehaviour
     {
         Single = DataManager.Single;
         main = MainController.main;
-        BG = transform.GetChild(0).gameObject;
-        textBox = transform.GetChild(1).gameObject;
-        Ch = transform.GetChild(2).gameObject;
-        select = transform.GetChild(3).gameObject;
+        defaultBG = transform.GetChild(0).GetComponent<Image>();
+        BG = transform.GetChild(1).GetComponent<Image>();
+        textBox = transform.GetChild(2).gameObject;
+        Ch = transform.GetChild(3).gameObject;
+        select = transform.GetChild(4).gameObject;
         content = textBox.transform.GetChild(0).GetComponent<Text>();
         Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<Text>();
         number = Single.data.inGameData.number;
@@ -54,6 +61,10 @@ public class InGame : MonoBehaviour
 
     void nextText() // 다음 텍스트 실행
     {
+        if(isBGChange)
+        {
+            return;
+        }
         if(cnt == crruentBranchTextInfo.Count - 1 && !isTextShow)
         {
             SelectUI();
@@ -78,6 +89,7 @@ public class InGame : MonoBehaviour
         }
         crruentBranchTextInfo = textDict[branch];
         cnt = 0;
+        BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[0].BG];
         SettingUI(crruentBranchTextInfo[0]); // 최초 세팅
     }
 
@@ -94,8 +106,64 @@ public class InGame : MonoBehaviour
             isTextShow = false;
         }
         Cname.text = info.charaterName[0]; // 임시값
-        BG.GetComponent<Image>().sprite = Single.data.spriteData.sprite[info.BG];
+
+        defaultBG.sprite = BG.sprite;
+        isBGChange = true;
+        StartCoroutine("ChangeBG" + info.BGChangeEffect);
         // 캐릭터 세팅 추가
+    }
+
+    IEnumerator ChangeBG0()
+    {
+        BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        yield return new WaitForSeconds(0f);
+        isBGChange = false;
+    }
+    IEnumerator ChangeBG1()
+    {
+        Color color1 = BG.color;
+        Color color2 = defaultBG.color;
+        color1.a = 0f;
+        color2.a = 1f;
+        BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        for (int i = 0; i < BGChangeSpeed / BGChangeSecond; i++)
+        {
+            color1.a += BGChangeSecond / (float)BGChangeSpeed;
+            color2.a -= BGChangeSecond / (float)BGChangeSpeed;
+            BG.color = color1;
+            defaultBG.color = color2;
+            yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
+        }
+        isBGChange = false;
+    }
+    IEnumerator ChangeBG2()
+    {
+        Color color1 = BG.color;
+        Color color2 = defaultBG.color;
+        color1 = Color.black;
+        color1.a = 0f;
+        BG.color = color1;
+        BG.sprite = Single.data.spriteData.sprite["하얀배경"];
+        for (int i = 0; i < BGChangeSpeed / BGChangeSecond; i++)
+        {
+            color1.a += BGChangeSecond / (float)BGChangeSpeed;
+            BG.color = color1;
+            yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
+        }
+        defaultBG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        for (int i = 0; i < BGChangeSpeed / BGChangeSecond; i++)
+        {
+            color1.a -= BGChangeSecond / (float)BGChangeSpeed;
+            BG.color = color1;
+            yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
+        }
+        BG.sprite = defaultBG.sprite;
+        isBGChange = false;
+    }
+
+    IEnumerator ShowCharater()
+    {
+        yield return new WaitForSeconds(0.1f);
     }
 
     IEnumerator TextShow(Text target, string text)
