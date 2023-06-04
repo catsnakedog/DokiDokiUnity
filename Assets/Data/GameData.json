@@ -22,7 +22,7 @@
                 "charaterScale": [
                     1.0
                 ],
-                "charaterText": "테스트 내용입니다 어느정도 길이가 있어야지 테스트가 가능하니 아무말이나 적어두겠습니다 감사합니다",
+                "charaterText": "테스트 내용입니다,,,,,,, 어느정도 길이가 있어야지 테스트가 가능하니 아무말이나 적어두겠습니다 감사합니다",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
@@ -47,7 +47,7 @@
                 "charaterScale": [
                     1.0
                 ],
-                "charaterText": "또 다른 테스트 내용입니다 전꺼와 같다면 테스트가 안됨으로 곂치지 않는 아무말이나 적어두겠습니다 감사합니다",
+                "charaterText": "또 다른 테스트 내용입니다 전꺼와 같다면 테스트가 안됨으로 겹치지 않는 아무말이나 적어두겠습니다 감사합니다",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
@@ -115,22 +115,30 @@
                     4
                 ],
                 "charaterName": [
-                    "python"
+                    "python",
+                    "java",
+                    "c++"
                 ],
                 "charaterSprite": [
-                    "python_idle"
+                    "python_idle",
+                    "java_idle",
+                    "c++_idle"
                 ],
                 "charaterLocationType": [
-                    1
+                    1,
+                    3,
+                    5
                 ],
                 "charaterScale": [
+                    1.0,
+                    1.0,
                     1.0
                 ],
                 "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
-                "charaterChangeEffect": 0,
+                "charaterChangeEffect": 1,
                 "BGChangeEffect": 0
             },
             {
@@ -1317,6 +1325,1258 @@
                 "BG": "기본배경_인게임",
                 "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    0,
+                    0
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "자취방 사건 이후,  HTML은 한 달째 자리를 비웠다.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    0,
+                    1
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "왜 나를 속였을까?",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    0,
+                    2
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "왜 아무한테도 말하지 않았을까?",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    0,
+                    3
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "주인공은 분노인지 설명을 듣고 싶은 마음인지 정확히 알기 위해서, 사라진 HTML을 찾으러 간다.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    0,
+                    4
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "우여곡절 끝에 만나게 된 HTML은 구석에서 시무룩하게 앉아 있다.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    0,
+                    5
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "휴학계 작성했다고, 지금까지 힘들게 해서 미안했다고, 스스로를 알아가는 시간을 가지고 싶다고 말한다.",
+                "charaterVoice": "null",
+                "selectType": 7,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    1,
+                    0
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "미구현입니다~",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    0
+                ],
+                "charaterName": [
+                    "html"
+                ],
+                "charaterSprite": [
+                    "html_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "그래.. 그렇구나..",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    1
+                ],
+                "charaterName": [
+                    "html"
+                ],
+                "charaterSprite": [
+                    "html_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "난 이만 갈게..",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    2
+                ],
+                "charaterName": [
+                    "html"
+                ],
+                "charaterSprite": [
+                    "html_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "잘 지내길 바래",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    3
+                ],
+                "charaterName": [
+                    "html"
+                ],
+                "charaterSprite": [
+                    "html_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "아..! 참고로 그냥 말해주는데",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    4
+                ],
+                "charaterName": [
+                    "html"
+                ],
+                "charaterSprite": [
+                    "html_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "좋아했었어. 이건 꾸며낸 게 아냐",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    5
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "나도 그랬다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    6
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "하지만, 거짓말을 하는 그녀를 믿을 수 없었다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    7
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "이 말은 진짜일까 거짓일까.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    8
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "모든 것이 거짓이었던 너를, 나는 그렇게 보냈다..",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    9
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "그 이후로 2년이 지났다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    10
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "그 동안 군대를 다녀오고, 학교로 돌아왔다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    11
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "달라진 점이라면",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    12
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "저거.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    13
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "그날 이후로, HTML의 그림자가 보이기 시작했다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    14
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "처음엔 진짜인 줄 알고 그에게 달려갔지만,",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    15
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "결국 허상이라는 것만 깨달았을 뿐이었다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    16
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "이후에 병원을 여러 곳 전전했지만, 아무 효과 없어서 요새는 그냥 애써 모른 척 지내고 있다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    17
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "세상은 여전히 나를 빼고 평화롭다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    18
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "집에서 가만히 있으면 미칠 것 같았기에 오랜만에 집 밖으로 나왔다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    19
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "목적지가 없는 기차를 타기 위해, 나는 맞은 편 플랫폼의 그와 눈을 마주치면서 지하철 역에 앉아있다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 1
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    20
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "(역의 웅성거리는 소리(환경음))",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    21
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "“내가 그때 어떻게 했어야 했을까..?”",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    22
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "그 순간, 나는 내 눈을 의심했다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    23
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "[환하게 미소 짓는 HTML]",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    24
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "‘아….'",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    25
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "아무렴 어때. 환상이든 현실이든.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    26
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "네 미소 한번이면 난 뭐든지 다 바칠 수 있어",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    27
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "며칠을 앓았을까?",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    28
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "하루? 이틀?",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    29
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "아니야. 2년 전 그때부터…",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    30
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "우쿨렐레 연주를,",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    31
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "강의실의 노을을,",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    32
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "축제에서 본 불꽃놀이를,",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    33
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "그날, 그 마지막 만남을.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    34
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "나는 너를 만나러 가고 있었던 거야",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    35
+                ],
+                "charaterName": [
+                    "???"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "지금 지금 열차가 들어오고 있습니다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    36
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "한 발자국.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    37
+                ],
+                "charaterName": [
+                    "???"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "The inner circle train for…",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    38
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "또 한 발자국.",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    39
+                ],
+                "charaterName": [
+                    "???"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "거기 학생!!! 위험해!!",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    40
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "더 이상 내디딜 곳이 없더라도,",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    41
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "불탈 걸 알면서도, 그저 불꽃 속으로 걸어갈 수 밖에 없는 거야",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    42
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "[기차 들어오는 소리]",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    43
+                ],
+                "charaterName": [
+                    "unity"
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "고마워, 그리고 미안해",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    44
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "[기차가 지나가는 소리]",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    45
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "[화면 전체가 빛으로 가득 찬다]",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "지하철",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    10,
+                    2,
+                    46
+                ],
+                "charaterName": [
+                    ""
+                ],
+                "charaterSprite": [],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "[ED4. ~unity]",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 1
             }
         ]
     },
@@ -1396,6 +2656,15 @@
                 "condition1": [],
                 "condition2": [],
                 "condition3": []
+            },
+            {
+                "number": 10,
+                "image": "html",
+                "title": "마지막",
+                "content": "보내줄까 말까",
+                "condition1": [],
+                "condition2": [],
+                "condition3": []
             }
         ]
     },
@@ -1465,6 +2734,17 @@
                     1,
                     2
                 ]
+            },
+            {
+                "selectType": 7,
+                "selectText": [
+                    "붙잡기",
+                    "보내준다"
+                ],
+                "branchChange": [
+                    1,
+                    2
+                ]
             }
         ]
     },
@@ -1472,6 +2752,10 @@
         "loadingCnt": 4,
         "maxCnt": 4,
         "number": 0,
+        "volumeBGM": 0.0,
+        "volumeSFX": 0.0,
+        "fontSize": 0.0,
+        "textSpeed": 0.0,
         "clearStory": []
     }
 }

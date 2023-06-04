@@ -11,43 +11,86 @@ using System.Runtime.Serialization;
 public class GoogleSheetManager
 {
     public DataManager Single;
-    const string URL = "https://script.google.com/macros/s/AKfycbwoe-XZ-43s_TJzXmN30_QDLldQMoq5e5S4CYYW8fxM5Gu2pqRI5kpLv9hshtGn7fvk/exec";
-    string[] strings;
+    string URL;
 
     public IEnumerator GoogleSheetDataSetting(int page)
     {
+        List<string> strings = new List<string>();
+        URL = "https://script.google.com/macros/s/AKfycbwoe-XZ-43s_TJzXmN30_QDLldQMoq5e5S4CYYW8fxM5Gu2pqRI5kpLv9hshtGn7fvk/exec";
         WWWForm form = new WWWForm();
         form.AddField("page", page);
         UnityWebRequest www = UnityWebRequest.Post(URL, form);
         yield return www.SendWebRequest();
 
         string data = www.downloadHandler.text;
-        strings = data.Split(',');
-
 
         if(page == 3)
         {
+            URL = "https://docs.google.com/spreadsheets/d/1kTMhmwrkWb2vmIk1Xly8OirtwdBzQLWDGJWJV0750AA/export?format=tsv&range=E14:E" + data + "&gid=1800569837";
+            www = UnityWebRequest.Get(URL);
+            yield return www.SendWebRequest();
+            data = www.downloadHandler.text;
+            foreach (string temp in data.Split('\n'))
+            {
+                foreach(string temp2 in temp.Split('\t'))
+                {
+                    strings.Add(temp2.Trim());
+                }
+            }
             ImageDataProcessing(strings);
         }
         if(page == 7)
         {
+            URL = "https://docs.google.com/spreadsheets/d/1kTMhmwrkWb2vmIk1Xly8OirtwdBzQLWDGJWJV0750AA/export?format=tsv&range=C14:U" + data + "&gid=779445051";
+            www = UnityWebRequest.Get(URL);
+            yield return www.SendWebRequest();
+            data = www.downloadHandler.text;
+            foreach (string temp in data.Split('\n'))
+            {
+                foreach (string temp2 in temp.Split('\t'))
+                {
+                    strings.Add(temp2.Trim());
+                }
+            }
             StoryDataProcessing(strings);
         }
         if(page == 8)
         {
+            URL = "https://docs.google.com/spreadsheets/d/1kTMhmwrkWb2vmIk1Xly8OirtwdBzQLWDGJWJV0750AA/export?format=tsv&range=C14:AA" + data + "&gid=690301575";
+            www = UnityWebRequest.Get(URL);
+            yield return www.SendWebRequest();
+            data = www.downloadHandler.text;
+            foreach (string temp in data.Split('\n'))
+            {
+                foreach (string temp2 in temp.Split('\t'))
+                {
+                    strings.Add(temp2.Trim());
+                }
+            }
             TextDataProcessing(strings);
         }
         if(page == 9)
         {
+            URL = "https://docs.google.com/spreadsheets/d/1kTMhmwrkWb2vmIk1Xly8OirtwdBzQLWDGJWJV0750AA/export?format=tsv&range=C14:M" + data + "&gid=117010698";
+            www = UnityWebRequest.Get(URL);
+            yield return www.SendWebRequest();
+            data = www.downloadHandler.text;
+            foreach (string temp in data.Split('\n'))
+            {
+                foreach (string temp2 in temp.Split('\t'))
+                {
+                    strings.Add(temp2.Trim());
+                }
+            }
             SelectDataProcessing(strings);
         }
     }
 
-    void StoryDataProcessing(string[] data)
+    void StoryDataProcessing(List<string> data)
     {
         int num = 19;
         List<StoryInfo> storys = new List<StoryInfo>();
-        for (int i = 0; i < data.Length / num; i++)
+        for (int i = 0; i < data.Count / num; i++)
         {
             StoryInfo story = new StoryInfo();
             story.number = int.Parse(data[i * num + 0]);
@@ -72,11 +115,11 @@ public class GoogleSheetManager
         Single.data.inGameData.loadingCnt++;
     }
 
-    void TextDataProcessing(string[] data)
+    void TextDataProcessing(List<string> data)
     {
         int num = 25;
         List<TextInfo> texts = new List<TextInfo>();
-        for(int i=0; i < data.Length / num; i++)
+        for(int i=0; i < data.Count / num; i++)
         {
             TextInfo text = new TextInfo();
             string[] temps = data[i * num + 0].Split('_');
@@ -108,11 +151,11 @@ public class GoogleSheetManager
         Single.data.inGameData.loadingCnt++;
     }
 
-    void SelectDataProcessing(string[] data)
+    void SelectDataProcessing(List<string> data)
     {
         int num = 11;
         List<SelectInfo> selects = new List<SelectInfo>();
-        for (int i = 0; i < data.Length / num; i++)
+        for (int i = 0; i < data.Count / num; i++)
         {
             SelectInfo select = new SelectInfo();
             select.selectType = int.Parse(data[i * num + 0]);
@@ -130,10 +173,10 @@ public class GoogleSheetManager
         Single.data.inGameData.loadingCnt++;
     }
 
-    void ImageDataProcessing(string[] data)
+    void ImageDataProcessing(List<string> data)
     {
         Single.data.spriteData.sprite = new Dictionary<string, Sprite>();
-        for (int i = 0; i < data.Length; i++)
+        for (int i = 0; i < data.Count; i++)
         {
             Single.data.spriteData.sprite.Add(data[i], Resources.Load<Sprite>("Sprite/" + data[i]));
         }

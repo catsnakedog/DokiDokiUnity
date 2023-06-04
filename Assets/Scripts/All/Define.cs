@@ -21,6 +21,18 @@ public class Define
         Story,
         Select,
         Charater,
+        Option,
         maxCount
+    }
+
+    public enum BGM
+    {
+        È¨È­¸é,
+        MaxCount
+    }
+
+    public enum SFX
+    {
+        MaxCount
     }
 }

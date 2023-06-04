@@ -42,6 +42,10 @@ public class InGameData
     public int loadingCnt;
     public int maxCnt;
     public int number;
+    public float volumeBGM;
+    public float volumeSFX;
+    public float fontSize;
+    public float textSpeed;
     public List<int> clearStory;
 
     public InGameData(List<int> clearStory)

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Loading : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class Loading : MonoBehaviour
 
     GameObject BG; // 배경
     GameObject LoadingBar; // 로딩바
-    Text percent; // 퍼센트
-    Text content; // 로딩바 위에 모하는 중인지
+    TMP_Text percent; // 퍼센트
+    TMP_Text content; // 로딩바 위에 모하는 중인지
 
     void Start()
     {
@@ -20,8 +21,8 @@ public class Loading : MonoBehaviour
         mainController = MainController.main;
         BG = transform.GetChild(0).gameObject;
         LoadingBar = transform.GetChild(1).gameObject;
-        content = LoadingBar.transform.GetChild(0).GetComponent<Text>();
-        percent = LoadingBar.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>();
+        content = LoadingBar.transform.GetChild(0).GetComponent<TMP_Text>();
+        percent = LoadingBar.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<TMP_Text>();
 
         //BG.GetComponent<SpriteRenderer>().sprite = Single.data.spriteData.sprite["기본배경_로딩"];
         LoadingBar.GetComponent<Slider>().value = (float)Single.data.inGameData.loadingCnt / (float)Single.data.inGameData.maxCnt;

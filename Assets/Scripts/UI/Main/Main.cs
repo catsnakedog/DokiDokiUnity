@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class Main : MonoBehaviour
     GameObject story; // 스토리 목록
     GameObject stat; // 스탯
     GameObject content; // 스토리들이 들어갈 content
+    GameObject option;
     void Start()
     {
         Single = DataManager.Single;
@@ -24,10 +26,17 @@ public class Main : MonoBehaviour
         story = transform.GetChild(2).gameObject;
         stat = transform.GetChild(3).gameObject;
         content = story.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+        option = transform.GetChild(4).gameObject;
+
+        option.GetComponent<Button>().onClick.AddListener(Option);
         BGSetting();
         StorySetting();
     }
 
+    void Option()
+    {
+        main.UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Option);
+    }
     void StorySetting()
     {
         GameObject temp;
@@ -57,8 +66,8 @@ public class Main : MonoBehaviour
             storyCom.number = info.number;
             temp.transform.SetParent(content.transform, false);
             temp.transform.GetChild(0).GetComponent<Image>().sprite = Single.data.spriteData.sprite[info.image];
-            temp.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = info.title;
-            temp.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = info.content;
+            temp.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = info.title;
+            temp.transform.GetChild(2).GetChild(0).GetComponent<TMP_Text>().text = info.content;
             temp.GetComponent<Button>().onClick.AddListener(storyCom.InGameStart);
         }
     }
@@ -66,6 +75,5 @@ public class Main : MonoBehaviour
     void BGSetting()
     {
         BG.GetComponent<Image>().sprite = Single.data.spriteData.sprite["기본배경_메인"];
-        int a = Single.data.storyData.storyInfo.Count;
     }
 }

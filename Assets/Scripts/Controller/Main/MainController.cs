@@ -9,6 +9,7 @@ public class MainController : MonoBehaviour
 
     public UIcontroller UI { get; set; }
     public ResourceController resource { get; set; }
+    public SoundController sound { get; set; }
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class MainController : MonoBehaviour
         main = this.GetComponent<MainController>();
         resource = gameObject.AddComponent<ResourceController>();
         UI = gameObject.AddComponent<UIcontroller>();
+        sound = gameObject.AddComponent<SoundController>();
 
         resource.init();
         UI.init();

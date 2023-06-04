@@ -29,7 +29,7 @@ public class InGame : MonoBehaviour
     bool isBGChange;
     bool isCharaterChange;
     List<TextInfo> crruentBranchTextInfo;
-    List<string> crruentIamgeList = new List<string>();
+    public List<string> crruentIamgeList = new List<string>();
     Dictionary<int, List<TextInfo>> textDict; // 선택지 별로 text를 분리해서 저장해둠
     Dictionary<string, GameObject> imageDict;
 
@@ -38,8 +38,9 @@ public class InGame : MonoBehaviour
     GameObject Ch; // 캐릭터 이미지들이 들어가는 오브젝트
     GameObject textBox; // 테스트가 나오는 박스
     GameObject select;
-    Text content; // 내용
-    Text Cname; // 말하는 사람 이름
+    GameObject option;
+    TMP_Text content; // 내용
+    TMP_Text Cname; // 말하는 사람 이름
 
     Coroutine textCoru;
     Coroutine imageCoru;
@@ -53,14 +54,16 @@ public class InGame : MonoBehaviour
         Ch = transform.GetChild(2).gameObject;
         textBox = transform.GetChild(3).gameObject;
         select = transform.GetChild(4).gameObject;
-        content = textBox.transform.GetChild(0).GetComponent<Text>();
-        Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<Text>();
+        option = transform.GetChild(5).gameObject;
+        content = textBox.transform.GetChild(0).GetComponent<TMP_Text>();
+        Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>();
         number = Single.data.inGameData.number;
         branch = 0;
         textShowDelay = 0.05f;
         isTextShow = false;
 
         textBox.GetComponent<Button>().onClick.AddListener(nextText);
+        option.GetComponent<Button>().onClick.AddListener(Option);
 
         GetAllTextData(); // 해당 스토리에 관련된 모든 데이터를 가져온다.
         SettingText(); // 최초 세팅
@@ -82,6 +85,11 @@ public class InGame : MonoBehaviour
             cnt++;
         }
         SettingUI(crruentBranchTextInfo[cnt]);
+    }
+
+    void Option()
+    {
+        main.UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Option);
     }
     
     public void SettingText()
@@ -108,8 +116,11 @@ public class InGame : MonoBehaviour
         }
         else
         {
-            StopCoroutine(textCoru);
-            if(imageCoru != null)
+            if (textCoru != null)
+            {
+                StopCoroutine(textCoru);
+            }
+            if (imageCoru != null)
             {
                 StopCoroutine(imageCoru);
             }
@@ -124,6 +135,8 @@ public class InGame : MonoBehaviour
 
         defaultBG.sprite = BG.sprite;
         isBGChange = true;
+        defaultBG.color = new Color(1f, 1f, 1f, 1f);
+        BG.color = new Color(1f, 1f, 1f, 1f);
         StartCoroutine("ChangeBG" + info.BGChangeEffect);
         CharaterSetting(info);
     }
@@ -138,6 +151,7 @@ public class InGame : MonoBehaviour
             GameObject temp = imageDict[info.charaterSprite[i]];
             if ((temp.transform.localPosition == location) && (temp.transform.localScale == new Vector3(info.charaterScale[i], info.charaterScale[i], 1f)))
             {
+                temp.SetActive(true);
                 continue;
             }
             temp.SetActive(false);
@@ -187,19 +201,19 @@ public class InGame : MonoBehaviour
         switch(n)
         {
             case 0:
-                return new Vector3(-750f, 0f, 0f);
+                return new Vector3(-750f, -540f, 0f);
             case 1:
-                return new Vector3(-500f, 0f, 0f);
+                return new Vector3(-500f, -540f, 0f);
             case 2:
-                return new Vector3(-250f, 0f, 0f);
+                return new Vector3(-250f, -540f, 0f);
             case 3:
-                return new Vector3(0f, 0f, 0f);
+                return new Vector3(0f, -540f, 0f);
             case 4:
-                return new Vector3(250f, 0f, 0f);
+                return new Vector3(250f, -540f, 0f);
             case 5:
-                return new Vector3(500f, 0f, 0f);
+                return new Vector3(500f, -540f, 0f);
             default:
-                return new Vector3(0f, 0f, 0f);
+                return new Vector3(0f, -540f, 0f);
         }
     }
 
@@ -251,17 +265,27 @@ public class InGame : MonoBehaviour
         isBGChange = false;
     }
 
-    IEnumerator TextShow(Text target, string text)
+    IEnumerator TextShow(TMP_Text target, string text)
     {
         isTextShow = true;
+        textShowDelay = Single.data.inGameData.textSpeed;
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i<text.Length;i++)
+        if(textShowDelay == 0f)
         {
-            yield return new WaitForSeconds(textShowDelay);
-            sb.Append(text[i]);
-            target.text = sb.ToString();
+            target.text = text;
+            isTextShow = false;
         }
-        isTextShow = false;
+        else
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                textShowDelay = Single.data.inGameData.textSpeed;
+                yield return new WaitForSeconds(textShowDelay);
+                sb.Append(text[i]);
+                target.text = sb.ToString();
+            }
+            isTextShow = false;
+        }
     }
 
     void GoMain()
@@ -283,7 +307,10 @@ public class InGame : MonoBehaviour
         }
         else
         {
-            StopCoroutine(textCoru);
+            if (textCoru != null)
+            {
+                StopCoroutine(textCoru);
+            }
             isTextShow = false;
             SelectInfo selectInfo = Single.data.selectData.selectInfo[crruentBranchTextInfo[cnt].selectType];
             int count = selectInfo.selectText.Count;
@@ -318,7 +345,7 @@ public class InGame : MonoBehaviour
                 selects[i].transform.SetParent(this.select.transform, false);
                 selects[i].GetComponent<Select>().inGame = this.GetComponent<InGame>();
                 selects[i].GetComponent<Select>().branch = selectInfo.branchChange[i];
-                selects[i].transform.GetChild(0).GetComponent<Text>().text = selectInfo.selectText[i];
+                selects[i].transform.GetChild(0).GetComponent<TMP_Text>().text = selectInfo.selectText[i];
                 selects[i].GetComponent<Button>().onClick.AddListener(selects[i].GetComponent<Select>().ChangeBranch);
             }
         }
