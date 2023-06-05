@@ -67,21 +67,90 @@ public class InGameData
 public class GameData
 {
     public Stat stat;
-    public GameData(Stat stat)
+    public LovePoint lovePoint;
+    public float volumeBGM;
+    public float volumeSFX;
+    public float fontSize;
+    public float textSpeed;
+    public List<int> clearStory;
+    public GameData(Stat stat, LovePoint lovePoint, float volumeBGM, float volumeSFX, float fontSize, float textSpeed, List<int> clearStory)
     {
         this.stat = stat;
+        this.lovePoint = lovePoint;
+        this.volumeBGM = volumeBGM;
+        this.volumeSFX = volumeSFX;
+        this.fontSize = fontSize;
+        this.textSpeed = textSpeed;
+        this.clearStory = clearStory;
     }
     public GameData()
     {
         stat = new Stat();
+        lovePoint = new LovePoint();
+        volumeBGM = 0;
+        volumeSFX = 0;
+        fontSize = 0;
+        textSpeed = 0;
+        clearStory = new List<int>();
     }
 }
 
 [System.Serializable]
 public class Stat
 {
+    public int plan;
+    public int coding;
+    public int graphic;
+    public int sound;
 
+    public Stat(int plan, int coding, int graphic, int sound)
+    {
+        this.plan = plan;
+        this.coding = coding;
+        this.graphic = graphic;
+        this.sound = sound;
+    }
+
+    public Stat()
+    {
+        this.plan = 0;
+        this.coding = 0;
+        this.graphic = 0;
+        this.sound = 0;
+    }
 }
+
+[System.Serializable]
+public class LovePoint
+{
+    public int c;
+    public int cplus;
+    public int cshop;
+    public int python;
+    public int java;
+    public int html;
+
+    public LovePoint(int c, int cplus, int cshop, int python, int java, int html)
+    {
+        this.c = c;
+        this.cplus = cplus;
+        this.cshop = cshop;
+        this.python = python;
+        this.java = java;
+        this.html = html;
+    }
+
+    public LovePoint()
+    {
+        c = 0;
+        cplus = 0;
+        cshop = 0;
+        python = 0;
+        java = 0;
+        html = 0;
+    }
+}
+
 #endregion
 
 #region TextData

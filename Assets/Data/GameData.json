@@ -1,6 +1,24 @@
 {
     "gameData": {
-        "stat": {}
+        "stat": {
+            "plan": 0,
+            "coding": 0,
+            "graphic": 0,
+            "sound": 0
+        },
+        "lovePoint": {
+            "c": 0,
+            "cplus": 0,
+            "cshop": 0,
+            "python": 0,
+            "java": 0,
+            "html": 0
+        },
+        "volumeBGM": 0.0,
+        "volumeSFX": 0.0,
+        "fontSize": 0.0,
+        "textSpeed": 0.0,
+        "clearStory": []
     },
     "textData": {
         "textInfo": [

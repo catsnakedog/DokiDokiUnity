@@ -14,9 +14,13 @@ public class Main : MonoBehaviour
     GameObject BG; // 배경
     GameObject charater; // 캐릭터
     GameObject story; // 스토리 목록
-    GameObject stat; // 스탯
+    GameObject table;
     GameObject content; // 스토리들이 들어갈 content
     GameObject option;
+
+    List<TMP_Text> lovePoint;
+    List<TMP_Text> stat;
+
     void Start()
     {
         Single = DataManager.Single;
@@ -24,19 +28,56 @@ public class Main : MonoBehaviour
         BG = transform.GetChild(0).gameObject;
         charater = transform.GetChild(1).gameObject;
         story = transform.GetChild(2).gameObject;
-        stat = transform.GetChild(3).gameObject;
+        table = transform.GetChild(3).gameObject;
         content = story.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
         option = transform.GetChild(4).gameObject;
+
+        lovePoint = new List<TMP_Text>();
+        stat = new List<TMP_Text>();
+
+        Transform[] transforms = table.transform.GetChild(0).GetComponentsInChildren<Transform>();
+        foreach(Transform transform in transforms)
+        {
+            if(transform.name != table.transform.GetChild(0).name)
+            {
+                lovePoint.Add(transform.GetComponent<TMP_Text>());
+            }
+        }
+        transforms = table.transform.GetChild(1).GetComponentsInChildren<Transform>();
+        foreach (Transform transform in transforms)
+        {
+            if (transform.name != table.transform.GetChild(1).name)
+            {
+                stat.Add(transform.GetComponent<TMP_Text>());
+            }
+        }
 
         option.GetComponent<Button>().onClick.AddListener(Option);
         BGSetting();
         StorySetting();
+        TableSetting();
     }
 
     void Option()
     {
         main.UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Option);
     }
+
+    void TableSetting()
+    {
+        lovePoint[0].text = "C호감도 " + Single.data.gameData.lovePoint.c;
+        lovePoint[1].text = "C++호감도 " + Single.data.gameData.lovePoint.cplus;
+        lovePoint[2].text = "C#호감도 " + Single.data.gameData.lovePoint.cshop;
+        lovePoint[3].text = "Python호감도 " + Single.data.gameData.lovePoint.python;
+        lovePoint[4].text = "Java호감도 " + Single.data.gameData.lovePoint.java;
+        lovePoint[5].text = "Html호감도 " + Single.data.gameData.lovePoint.html;
+
+        stat[0].text = "기획 " + Single.data.gameData.stat.plan;
+        stat[1].text = "코딩 " + Single.data.gameData.stat.coding;
+        stat[2].text = "그래픽 " + Single.data.gameData.stat.graphic;
+        stat[3].text = "사운드 " + Single.data.gameData.stat.sound;
+    }
+
     void StorySetting()
     {
         GameObject temp;
@@ -46,18 +87,35 @@ public class Main : MonoBehaviour
         foreach (StoryInfo info in Single.data.storyData.storyInfo)
         {
             bool pass = true;
+            int cnt2 = 0;
             if (Single.data.inGameData.clearStory.Contains(info.number)) continue;
             foreach (int condition in info.condition1)
             {
                 if (!Single.data.inGameData.clearStory.Contains(condition)) pass = false;
             }
-            foreach (int condition in info.condition2)
+            for(int i = 0; i < 1; i++)
             {
-                if (!Single.data.inGameData.clearStory.Contains(condition)) pass = false;
+                if (info.condition2.Count == 0) continue;
+                if (info.condition2[0] <= Single.data.gameData.lovePoint.c) pass = false;
+                if (info.condition2.Count == 1) continue;
+                if (info.condition2[1] <= Single.data.gameData.lovePoint.cplus) pass = false;
+                if (info.condition2.Count == 2) continue;
+                if (info.condition2[2] <= Single.data.gameData.lovePoint.cshop) pass = false;
+                if (info.condition2.Count == 3) continue;
+                if (info.condition2[3] <= Single.data.gameData.lovePoint.python) pass = false;
             }
-            foreach (int condition in info.condition3)
+            //if (info.condition2[4] <= Single.data.gameData.lovePoint.java) pass = false;
+            //if (info.condition2[5] <= Single.data.gameData.lovePoint.html) pass = false;
+            for(int i = 0; i < 1; i++)
             {
-                if (!Single.data.inGameData.clearStory.Contains(condition)) pass = false;
+                if (info.condition3.Count == 0) continue;
+                if (info.condition3[0] <= Single.data.gameData.stat.plan) pass = false;
+                if (info.condition3.Count == 1) continue;
+                if (info.condition3[1] <= Single.data.gameData.stat.coding) pass = false;
+                if (info.condition3.Count == 2) continue;
+                if (info.condition3[2] <= Single.data.gameData.stat.graphic) pass = false;
+                if (info.condition3.Count == 3) continue;
+                if (info.condition3[3] <= Single.data.gameData.stat.sound) pass = false;
             }
             if (!pass) continue;
             cnt++;
