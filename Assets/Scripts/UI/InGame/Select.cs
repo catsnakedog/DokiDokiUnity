@@ -18,6 +18,7 @@ public class Select : MonoBehaviour
     public void ChangeBranch()
     {
         inGame.branch = this.branch;
+        inGame.cnt = 0;
         inGame.SettingText();
     }
 }

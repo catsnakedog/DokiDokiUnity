@@ -34,6 +34,9 @@ public class Main : MonoBehaviour
         lovePoint = new List<TMP_Text>();
         stat = new List<TMP_Text>();
 
+        Single.data.inGameData.branch = new List<int> { 0, 0, 0 };
+        Single.data.inGameData.crruentStat = "Main";
+
         Transform[] transforms = table.transform.GetChild(0).GetComponentsInChildren<Transform>();
         foreach(Transform transform in transforms)
         {

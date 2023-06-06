@@ -59,7 +59,7 @@ public class Save : MonoBehaviour
 
     void Left()
     {
-        main.UI.UIsetting(Define.UIlevel.Level1, Define.UItype.Main);
+        main.UI.UIsetting(Define.UIlevel.Level1, (Define.UItype)Enum.Parse(typeof(Define.UItype), Single.data.inGameData.crruentStat));
         Destroy(gameObject);
     }
 
@@ -117,7 +117,9 @@ public class Save : MonoBehaviour
 
     void SaveInGameData()
     {
-        Single.data.saveData.save.Add(Single.data.inGameData);
+        InGameData temp = new InGameData();
+        Copy(temp, Single.data.inGameData);
+        Single.data.saveData.save.Add(temp);
         Single.Save();
         SettingSave();
     }
@@ -130,5 +132,31 @@ public class Save : MonoBehaviour
         }
         // È®ÀÎÃ¢ ÆË¾÷
         Single.data.inGameData = Single.data.saveData.save[page * 6 + number];
+        main.UI.UIsetting(Define.UIlevel.Level1, (Define.UItype)Enum.Parse(typeof(Define.UItype), Single.data.inGameData.crruentStat));
+    }
+
+    void Copy(InGameData A, InGameData B)
+    {
+        A.stat.plan = B.stat.plan;
+        A.stat.coding = B.stat.coding;
+        A.stat.graphic = B.stat.graphic;
+        A.stat.sound = B.stat.sound;
+        A.lovePoint.c = B.lovePoint.c;
+        A.lovePoint.cplus = B.lovePoint.cplus;
+        A.lovePoint.cshop = B.lovePoint.cshop;
+        A.lovePoint.python = B.lovePoint.python;
+        A.lovePoint.java = B.lovePoint.java;
+        A.lovePoint.html = B.lovePoint.html;
+        A.loadingCnt = B.loadingCnt;
+        A.maxCnt = B.maxCnt;
+        A.branch.Add(B.branch[0]);
+        A.branch.Add(B.branch[1]);
+        A.branch.Add(B.branch[2]);
+        A.week = B.week;
+        foreach(int temp in B.clearStory)
+        {
+            A.clearStory.Add(temp);
+        }
+        A.crruentStat = B.crruentStat;
     }
 }

@@ -18,13 +18,13 @@ public class InGame : MonoBehaviour
     MainController main;
 
     public float textShowDelay;
-    int number; // 스토리 넘버
-    public int branch;
+    public int number; // A_B_C (A)
+    public int branch; // A_B_C (B)
+    public int cnt; // A_B_C (C)
     public int BGChangeSpeed;
     public float BGChangeSecond;
     public int charaterChangeSpeed;
     public float charaterChangeSecond;
-    int cnt;
     bool isTextShow;
     bool isBGChange;
     List<TextInfo> crruentBranchTextInfo;
@@ -57,17 +57,18 @@ public class InGame : MonoBehaviour
         option = transform.GetChild(5).gameObject;
         content = textBox.transform.GetChild(0).GetComponent<TMP_Text>();
         Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>();
-        number = Single.data.inGameData.number;
-        branch = 0;
+        number = Single.data.inGameData.branch[0];
+        branch = Single.data.inGameData.branch[1];
+        cnt = Single.data.inGameData.branch[2];
         textShowDelay = 0.05f;
         isTextShow = false;
         logTextInfo = new List<TextInfo>();
+        Single.data.inGameData.crruentStat = "InGame";
 
         textBox.GetComponent<Button>().onClick.AddListener(nextText);
         option.GetComponent<Button>().onClick.AddListener(Option);
 
         GetAllTextData(); // 해당 스토리에 관련된 모든 데이터를 가져온다.
-        SettingText(); // 최초 세팅
     }
 
     void nextText() // 다음 텍스트 실행
@@ -104,14 +105,14 @@ public class InGame : MonoBehaviour
             }
         }
         crruentBranchTextInfo = textDict[branch];
-        cnt = 0;
-        BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[0].BG];
-        SettingUI(crruentBranchTextInfo[0]); // 최초 세팅
+        BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        SettingUI(crruentBranchTextInfo[cnt]); // 최초 세팅
     }
 
     void SettingUI(TextInfo info)
     {
-        if(!isTextShow)
+        Single.data.inGameData.branch = new List<int> { number, branch, cnt };
+        if (!isTextShow)
         {
             textCoru = StartCoroutine(TextShow(content, info.charaterText));
         }
@@ -384,6 +385,7 @@ public class InGame : MonoBehaviour
             }
             textDict[info.branch[1]].Add(info);
         }
+        SettingText(); // 최초 세팅
     }
 
     void ImagePool(string temp)

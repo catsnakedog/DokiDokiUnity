@@ -71,19 +71,21 @@ public class InGameData
     public LovePoint lovePoint; // 호감도
     public int loadingCnt;
     public int maxCnt;
-    public int number; // 선택한 스토리 넘버
+    public List<int> branch;
     public int week;
     public List<int> clearStory;
+    public string crruentStat;
 
-    public InGameData(Stat stat, LovePoint lovePoint, int loadingCnt, int maxCnt, int number, int week, List<int> clearStory)
+    public InGameData(Stat stat, LovePoint lovePoint, int loadingCnt, int maxCnt, List<int> branch, int week, List<int> clearStory, string crruentStat)
     {
         this.stat = stat;
         this.lovePoint = lovePoint;
         this.loadingCnt = loadingCnt;
         this.maxCnt = maxCnt;
-        this.number = number;
+        this.branch = branch;
         this.week = week;
         this.clearStory = clearStory;
+        this.crruentStat = crruentStat;
     }
 
     public InGameData()
@@ -92,9 +94,10 @@ public class InGameData
         this.lovePoint = new LovePoint();
         this.loadingCnt = 0;
         this.maxCnt = 10;
-        this.number = 0;
+        this.branch = new List<int>();
         this.week = 1;
         this.clearStory = new List<int>();
+        this.crruentStat = "";
     }
 }
 

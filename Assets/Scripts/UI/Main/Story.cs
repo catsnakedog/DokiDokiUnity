@@ -16,7 +16,7 @@ public class Story : MonoBehaviour
 
     public void InGameStart()
     {
-        Single.data.inGameData.number = number;
+        Single.data.inGameData.branch[0] = number;
         main.UI.UIsetting(Define.UIlevel.Level1, Define.UItype.InGame);
     }
 }

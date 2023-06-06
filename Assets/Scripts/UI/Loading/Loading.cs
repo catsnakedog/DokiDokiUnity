@@ -24,6 +24,8 @@ public class Loading : MonoBehaviour
         content = LoadingBar.transform.GetChild(0).GetComponent<TMP_Text>();
         percent = LoadingBar.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<TMP_Text>();
 
+        Single.data.inGameData.crruentStat = "Loading";
+
         //BG.GetComponent<SpriteRenderer>().sprite = Single.data.spriteData.sprite["기본배경_로딩"];
         LoadingBar.GetComponent<Slider>().value = (float)Single.data.inGameData.loadingCnt / (float)Single.data.inGameData.maxCnt;
         percent.text = ((float)Single.data.inGameData.loadingCnt / (float)Single.data.inGameData.maxCnt * 100).ToString();

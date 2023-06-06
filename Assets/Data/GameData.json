@@ -18,9 +18,14 @@
                 },
                 "loadingCnt": 4,
                 "maxCnt": 4,
-                "number": 2,
+                "branch": [
+                    0,
+                    0,
+                    0
+                ],
                 "week": 1,
-                "clearStory": []
+                "clearStory": [],
+                "crruentStat": "Main"
             },
             {
                 "stat": {
@@ -39,19 +44,42 @@
                 },
                 "loadingCnt": 4,
                 "maxCnt": 4,
-                "number": 10,
-                "week": 10,
-                "clearStory": [
+                "branch": [
                     1,
-                    2,
-                    3,
-                    4,
+                    0,
+                    0
+                ],
+                "week": 1,
+                "clearStory": [],
+                "crruentStat": "InGame"
+            },
+            {
+                "stat": {
+                    "plan": 0,
+                    "coding": 0,
+                    "graphic": 0,
+                    "sound": 0
+                },
+                "lovePoint": {
+                    "c": 0,
+                    "cplus": 0,
+                    "cshop": 0,
+                    "python": 0,
+                    "java": 0,
+                    "html": 0
+                },
+                "loadingCnt": 4,
+                "maxCnt": 4,
+                "branch": [
                     9,
-                    6,
-                    7,
-                    8,
-                    10
-                ]
+                    0,
+                    2
+                ],
+                "week": 2,
+                "clearStory": [
+                    1
+                ],
+                "crruentStat": "InGame"
             }
         ]
     },
@@ -2818,14 +2846,21 @@
         },
         "loadingCnt": 4,
         "maxCnt": 4,
-        "number": 2,
-        "week": 1,
-        "clearStory": []
+        "branch": [
+            9,
+            0,
+            2
+        ],
+        "week": 2,
+        "clearStory": [
+            1
+        ],
+        "crruentStat": "InGame"
     },
     "optionData": {
-        "volumeBGM": 0.1693931519985199,
+        "volumeBGM": 0.0,
         "volumeSFX": 0.1693931519985199,
         "fontSize": 0.0,
-        "textSpeed": 0.05000000074505806
+        "textSpeed": 0.019999999552965165
     }
 }
