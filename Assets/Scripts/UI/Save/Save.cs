@@ -131,7 +131,7 @@ public class Save : MonoBehaviour
             return;
         }
         // È®ÀÎÃ¢ ÆË¾÷
-        Single.data.inGameData = Single.data.saveData.save[page * 6 + number];
+        Copy(Single.data.inGameData, Single.data.saveData.save[page * 6 + number]);
         main.UI.UIsetting(Define.UIlevel.Level1, (Define.UItype)Enum.Parse(typeof(Define.UItype), Single.data.inGameData.crruentStat));
     }
 
@@ -149,10 +149,12 @@ public class Save : MonoBehaviour
         A.lovePoint.html = B.lovePoint.html;
         A.loadingCnt = B.loadingCnt;
         A.maxCnt = B.maxCnt;
+        A.branch.Clear();
         A.branch.Add(B.branch[0]);
         A.branch.Add(B.branch[1]);
         A.branch.Add(B.branch[2]);
         A.week = B.week;
+        A.clearStory.Clear();
         foreach(int temp in B.clearStory)
         {
             A.clearStory.Add(temp);

@@ -45,12 +45,14 @@
                 "loadingCnt": 4,
                 "maxCnt": 4,
                 "branch": [
-                    1,
+                    6,
                     0,
                     0
                 ],
-                "week": 1,
-                "clearStory": [],
+                "week": 2,
+                "clearStory": [
+                    4
+                ],
                 "crruentStat": "InGame"
             },
             {
@@ -71,14 +73,12 @@
                 "loadingCnt": 4,
                 "maxCnt": 4,
                 "branch": [
-                    9,
+                    10,
                     0,
-                    2
+                    5
                 ],
-                "week": 2,
-                "clearStory": [
-                    1
-                ],
+                "week": 1,
+                "clearStory": [],
                 "crruentStat": "InGame"
             }
         ]
@@ -2847,14 +2847,12 @@
         "loadingCnt": 4,
         "maxCnt": 4,
         "branch": [
-            9,
+            10,
             0,
-            2
+            5
         ],
-        "week": 2,
-        "clearStory": [
-            1
-        ],
+        "week": 1,
+        "clearStory": [],
         "crruentStat": "InGame"
     },
     "optionData": {
