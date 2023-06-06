@@ -32,38 +32,41 @@ public class Option : MonoBehaviour
         fontSize.GetComponent<Slider>().onValueChanged.AddListener(FontSizeChange);
         textSpeed.GetComponent<Slider>().onValueChanged.AddListener(TextSpeedChange);
         left.GetComponent<Button>().onClick.AddListener(Left);
+
         init();
     }
 
     void Left()
     {
         Time.timeScale = 1f;
+        Single.Save();
         Destroy(this.gameObject);
     }
 
     void init()
     {
-        BGM.GetComponent<Slider>().value = Single.data.inGameData.volumeBGM;
-        BGM.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)(Single.data.inGameData.volumeBGM * 100)).ToString();
-        SFX.GetComponent<Slider>().value = Single.data.inGameData.volumeSFX;
-        SFX.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)(Single.data.inGameData.volumeSFX * 100)).ToString();
+        BGM.GetComponent<Slider>().value = Single.data.optionData.volumeBGM;
+        BGM.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)(Single.data.optionData.volumeBGM * 100)).ToString();
+        SFX.GetComponent<Slider>().value = Single.data.optionData.volumeSFX;
+        SFX.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)(Single.data.optionData.volumeSFX * 100)).ToString();
+
         int temp = 3;
-        if(Single.data.inGameData.textSpeed == 0.1f)
+        if(Single.data.optionData.textSpeed == 0.1f)
         {
             temp = 0;
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "느림";
         }
-        if (Single.data.inGameData.textSpeed == 0.05f)
+        if (Single.data.optionData.textSpeed == 0.05f)
         {
             temp = 1;
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "중간";
         }
-        if (Single.data.inGameData.textSpeed == 0.02f)
+        if (Single.data.optionData.textSpeed == 0.02f)
         {
             temp = 2;
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "빠름";
         }
-        if (Single.data.inGameData.textSpeed == 0f)
+        if (Single.data.optionData.textSpeed == 0f)
         {
             temp = 3;
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "없음";
@@ -73,14 +76,14 @@ public class Option : MonoBehaviour
 
     void BGMChange(float num)
     {
-        Single.data.inGameData.volumeBGM = num;
+        Single.data.optionData.volumeBGM = num;
         main.sound.BGMSource.volume = num;
         BGM.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)(num * 100)).ToString();
     }
 
     void SFXChange(float num)
     {
-        Single.data.inGameData.volumeSFX = num;
+        Single.data.optionData.volumeSFX = num;
         main.sound.SFXSource.volume = num;
         SFX.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)(num * 100)).ToString();
     }
@@ -95,22 +98,22 @@ public class Option : MonoBehaviour
         if((int)num == 0)
         {
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "느림";
-            Single.data.inGameData.textSpeed = 0.1f;
+            Single.data.optionData.textSpeed = 0.1f;
         }
         if ((int)num == 1)
         {
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "중간";
-            Single.data.inGameData.textSpeed = 0.05f;
+            Single.data.optionData.textSpeed = 0.05f;
         }
         if ((int)num == 2)
         {
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "빠름";
-            Single.data.inGameData.textSpeed = 0.02f;
+            Single.data.optionData.textSpeed = 0.02f;
         }
         if ((int)num == 3)
         {
             textSpeed.transform.GetChild(0).GetComponent<TMP_Text>().text = "없음";
-            Single.data.inGameData.textSpeed = 0f;
+            Single.data.optionData.textSpeed = 0f;
         }
     }
 }

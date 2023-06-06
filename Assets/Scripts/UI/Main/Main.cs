@@ -4,7 +4,6 @@ using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
-using static Define;
 
 public class Main : MonoBehaviour
 {
@@ -65,17 +64,17 @@ public class Main : MonoBehaviour
 
     void TableSetting()
     {
-        lovePoint[0].text = "C호감도 " + Single.data.gameData.lovePoint.c;
-        lovePoint[1].text = "C++호감도 " + Single.data.gameData.lovePoint.cplus;
-        lovePoint[2].text = "C#호감도 " + Single.data.gameData.lovePoint.cshop;
-        lovePoint[3].text = "Python호감도 " + Single.data.gameData.lovePoint.python;
-        lovePoint[4].text = "Java호감도 " + Single.data.gameData.lovePoint.java;
-        lovePoint[5].text = "Html호감도 " + Single.data.gameData.lovePoint.html;
+        lovePoint[0].text = "C호감도 " + Single.data.inGameData.lovePoint.c;
+        lovePoint[1].text = "C++호감도 " + Single.data.inGameData.lovePoint.cplus;
+        lovePoint[2].text = "C#호감도 " + Single.data.inGameData.lovePoint.cshop;
+        lovePoint[3].text = "Python호감도 " + Single.data.inGameData.lovePoint.python;
+        lovePoint[4].text = "Java호감도 " + Single.data.inGameData.lovePoint.java;
+        lovePoint[5].text = "Html호감도 " + Single.data.inGameData.lovePoint.html;
 
-        stat[0].text = "기획 " + Single.data.gameData.stat.plan;
-        stat[1].text = "코딩 " + Single.data.gameData.stat.coding;
-        stat[2].text = "그래픽 " + Single.data.gameData.stat.graphic;
-        stat[3].text = "사운드 " + Single.data.gameData.stat.sound;
+        stat[0].text = "기획 " + Single.data.inGameData.stat.plan;
+        stat[1].text = "코딩 " + Single.data.inGameData.stat.coding;
+        stat[2].text = "그래픽 " + Single.data.inGameData.stat.graphic;
+        stat[3].text = "사운드 " + Single.data.inGameData.stat.sound;
     }
 
     void StorySetting()
@@ -87,7 +86,6 @@ public class Main : MonoBehaviour
         foreach (StoryInfo info in Single.data.storyData.storyInfo)
         {
             bool pass = true;
-            int cnt2 = 0;
             if (Single.data.inGameData.clearStory.Contains(info.number)) continue;
             foreach (int condition in info.condition1)
             {
@@ -96,26 +94,26 @@ public class Main : MonoBehaviour
             for(int i = 0; i < 1; i++)
             {
                 if (info.condition2.Count == 0) continue;
-                if (info.condition2[0] <= Single.data.gameData.lovePoint.c) pass = false;
+                if (info.condition2[0] <= Single.data.inGameData.lovePoint.c) pass = false;
                 if (info.condition2.Count == 1) continue;
-                if (info.condition2[1] <= Single.data.gameData.lovePoint.cplus) pass = false;
+                if (info.condition2[1] <= Single.data.inGameData.lovePoint.cplus) pass = false;
                 if (info.condition2.Count == 2) continue;
-                if (info.condition2[2] <= Single.data.gameData.lovePoint.cshop) pass = false;
+                if (info.condition2[2] <= Single.data.inGameData.lovePoint.cshop) pass = false;
                 if (info.condition2.Count == 3) continue;
-                if (info.condition2[3] <= Single.data.gameData.lovePoint.python) pass = false;
+                if (info.condition2[3] <= Single.data.inGameData.lovePoint.python) pass = false;
             }
             //if (info.condition2[4] <= Single.data.gameData.lovePoint.java) pass = false;
             //if (info.condition2[5] <= Single.data.gameData.lovePoint.html) pass = false;
             for(int i = 0; i < 1; i++)
             {
                 if (info.condition3.Count == 0) continue;
-                if (info.condition3[0] <= Single.data.gameData.stat.plan) pass = false;
+                if (info.condition3[0] <= Single.data.inGameData.stat.plan) pass = false;
                 if (info.condition3.Count == 1) continue;
-                if (info.condition3[1] <= Single.data.gameData.stat.coding) pass = false;
+                if (info.condition3[1] <= Single.data.inGameData.stat.coding) pass = false;
                 if (info.condition3.Count == 2) continue;
-                if (info.condition3[2] <= Single.data.gameData.stat.graphic) pass = false;
+                if (info.condition3[2] <= Single.data.inGameData.stat.graphic) pass = false;
                 if (info.condition3.Count == 3) continue;
-                if (info.condition3[3] <= Single.data.gameData.stat.sound) pass = false;
+                if (info.condition3[3] <= Single.data.inGameData.stat.sound) pass = false;
             }
             if (!pass) continue;
             cnt++;

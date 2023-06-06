@@ -30,6 +30,6 @@ public class MainController : MonoBehaviour
 
     public void Test()
     {
-        UI.UIsetting(Define.UIlevel.Level1, Define.UItype.Main);
+        UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Save);
     }
 }

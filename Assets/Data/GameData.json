@@ -1,24 +1,59 @@
 {
-    "gameData": {
-        "stat": {
-            "plan": 0,
-            "coding": 0,
-            "graphic": 0,
-            "sound": 0
-        },
-        "lovePoint": {
-            "c": 0,
-            "cplus": 0,
-            "cshop": 0,
-            "python": 0,
-            "java": 0,
-            "html": 0
-        },
-        "volumeBGM": 0.0,
-        "volumeSFX": 0.0,
-        "fontSize": 0.0,
-        "textSpeed": 0.0,
-        "clearStory": []
+    "saveData": {
+        "save": [
+            {
+                "stat": {
+                    "plan": 0,
+                    "coding": 0,
+                    "graphic": 0,
+                    "sound": 0
+                },
+                "lovePoint": {
+                    "c": 0,
+                    "cplus": 0,
+                    "cshop": 0,
+                    "python": 0,
+                    "java": 0,
+                    "html": 0
+                },
+                "loadingCnt": 4,
+                "maxCnt": 4,
+                "number": 2,
+                "week": 1,
+                "clearStory": []
+            },
+            {
+                "stat": {
+                    "plan": 0,
+                    "coding": 0,
+                    "graphic": 0,
+                    "sound": 0
+                },
+                "lovePoint": {
+                    "c": 0,
+                    "cplus": 0,
+                    "cshop": 0,
+                    "python": 0,
+                    "java": 0,
+                    "html": 0
+                },
+                "loadingCnt": 4,
+                "maxCnt": 4,
+                "number": 10,
+                "week": 10,
+                "clearStory": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    9,
+                    6,
+                    7,
+                    8,
+                    10
+                ]
+            }
+        ]
     },
     "textData": {
         "textInfo": [
@@ -2767,13 +2802,30 @@
         ]
     },
     "inGameData": {
+        "stat": {
+            "plan": 0,
+            "coding": 0,
+            "graphic": 0,
+            "sound": 0
+        },
+        "lovePoint": {
+            "c": 0,
+            "cplus": 0,
+            "cshop": 0,
+            "python": 0,
+            "java": 0,
+            "html": 0
+        },
         "loadingCnt": 4,
         "maxCnt": 4,
-        "number": 0,
-        "volumeBGM": 0.0,
-        "volumeSFX": 0.0,
-        "fontSize": 0.0,
-        "textSpeed": 0.0,
+        "number": 2,
+        "week": 1,
         "clearStory": []
+    },
+    "optionData": {
+        "volumeBGM": 0.1693931519985199,
+        "volumeSFX": 0.1693931519985199,
+        "fontSize": 0.0,
+        "textSpeed": 0.05000000074505806
     }
 }

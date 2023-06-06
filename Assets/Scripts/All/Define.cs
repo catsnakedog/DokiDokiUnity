@@ -22,6 +22,7 @@ public class Define
         Select,
         Charater,
         Option,
+        Save,
         maxCount
     }
 

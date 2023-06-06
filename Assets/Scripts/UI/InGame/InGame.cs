@@ -27,8 +27,8 @@ public class InGame : MonoBehaviour
     int cnt;
     bool isTextShow;
     bool isBGChange;
-    bool isCharaterChange;
     List<TextInfo> crruentBranchTextInfo;
+    public List<TextInfo> logTextInfo;
     public List<string> crruentIamgeList = new List<string>();
     Dictionary<int, List<TextInfo>> textDict; // 선택지 별로 text를 분리해서 저장해둠
     Dictionary<string, GameObject> imageDict;
@@ -61,6 +61,7 @@ public class InGame : MonoBehaviour
         branch = 0;
         textShowDelay = 0.05f;
         isTextShow = false;
+        logTextInfo = new List<TextInfo>();
 
         textBox.GetComponent<Button>().onClick.AddListener(nextText);
         option.GetComponent<Button>().onClick.AddListener(Option);
@@ -267,8 +268,9 @@ public class InGame : MonoBehaviour
 
     IEnumerator TextShow(TMP_Text target, string text)
     {
+        logTextInfo.Add(crruentBranchTextInfo[cnt]);
         isTextShow = true;
-        textShowDelay = Single.data.inGameData.textSpeed;
+        textShowDelay = Single.data.optionData.textSpeed;
         StringBuilder sb = new StringBuilder();
         if(textShowDelay == 0f)
         {
@@ -279,7 +281,7 @@ public class InGame : MonoBehaviour
         {
             for (int i = 0; i < text.Length; i++)
             {
-                textShowDelay = Single.data.inGameData.textSpeed;
+                textShowDelay = Single.data.optionData.textSpeed;
                 yield return new WaitForSeconds(textShowDelay);
                 sb.Append(text[i]);
                 target.text = sb.ToString();
@@ -290,6 +292,7 @@ public class InGame : MonoBehaviour
 
     void GoMain()
     {
+        Single.data.inGameData.week++;
         Single.data.inGameData.clearStory.Add(number);
         main.UI.UIsetting(Define.UIlevel.Level1, Define.UItype.Main);
     }

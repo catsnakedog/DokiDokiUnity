@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -360}
+  m_AnchoredPosition: {x: 0, y: -387.12}
   m_SizeDelta: {x: 2100, y: 305.7657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1119819139570618106
@@ -867,6 +867,7 @@ MonoBehaviour:
   BGChangeSecond: 0.35
   charaterChangeSpeed: 100
   charaterChangeSecond: 0.1
+  logTextInfo: []
   crruentIamgeList: []
 --- !u!1 &6468083064460567665
 GameObject:

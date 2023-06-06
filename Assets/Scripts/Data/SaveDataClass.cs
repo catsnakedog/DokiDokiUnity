@@ -3,95 +3,98 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEditor;
-using JetBrains.Annotations;
-using UnityEngine.WSA;
 
 [System.Serializable]
 public class SaveDataClass
 {
-    public GameData gameData;
-    public TextData textData;
-    public SpriteData spriteData;
-    public StoryData storyData;
-    public SelectData selectData;
-    public InGameData inGameData;
-    public SaveDataClass(GameData gameData, TextData textData, SpriteData spriteData, StoryData storyData, SelectData selectData, InGameData inGameData)
+    public SaveData saveData; // 세이브 파일
+    public TextData textData; // 텍스트 데이터
+    public SpriteData spriteData; // 이미지 데이터
+    public StoryData storyData; // 스토리 데이터
+    public SelectData selectData; // 분기점 관련 데이터
+    public InGameData inGameData; // 현재 진행중인 파일 데이터
+    public OptionData optionData; // 옵션 관련 데이터
+    public SaveDataClass(SaveData saveData, TextData textData, SpriteData spriteData, StoryData storyData, SelectData selectData, InGameData inGameData, OptionData optionData)
     {
-        this.gameData = gameData;
+        this.saveData = saveData;
         this.textData = textData;
         this.spriteData = spriteData;
         this.storyData = storyData;
         this.selectData = selectData;
         this.inGameData = inGameData;
+        this.optionData = optionData;
     }
     public SaveDataClass()
     {
-        this.gameData = new GameData();
+        this.saveData = new SaveData();
         this.textData = new TextData();
         this.spriteData = new SpriteData();
         this.storyData = new StoryData();
         this.selectData = new SelectData();
         this.inGameData = new InGameData();
+        this.optionData = new OptionData();
     }
 }
+
+#region OptionData
+[System.Serializable]
+public class OptionData
+{
+    public float volumeBGM;
+    public float volumeSFX;
+    public float fontSize;
+    public float textSpeed;
+
+    public OptionData(float volumeBGM, float volumeSFX, float fontSize, float textSpeed)
+    {
+        this.volumeBGM = volumeBGM;
+        this.volumeSFX = volumeSFX;
+        this.fontSize = fontSize;
+        this.textSpeed = textSpeed;
+    }
+
+    public OptionData()
+    {
+        this.volumeBGM = 0;
+        this.volumeSFX = 0;
+        this.fontSize = 0;
+        this.textSpeed = 0;
+    }
+}
+#endregion
 
 #region InGameData
 [System.Serializable]
 public class InGameData
 {
+    public Stat stat; // 스탯
+    public LovePoint lovePoint; // 호감도
     public int loadingCnt;
     public int maxCnt;
-    public int number;
-    public float volumeBGM;
-    public float volumeSFX;
-    public float fontSize;
-    public float textSpeed;
+    public int number; // 선택한 스토리 넘버
+    public int week;
     public List<int> clearStory;
 
-    public InGameData(List<int> clearStory)
-    {
-        this.clearStory = clearStory;
-    }
-    public InGameData()
-    {
-        this.loadingCnt = 0;
-        this.maxCnt = 10;
-        this.number = 0;
-        this.clearStory = new List<int>();
-    }
-}
-#endregion
-
-#region GameData
-[System.Serializable]
-public class GameData
-{
-    public Stat stat;
-    public LovePoint lovePoint;
-    public float volumeBGM;
-    public float volumeSFX;
-    public float fontSize;
-    public float textSpeed;
-    public List<int> clearStory;
-    public GameData(Stat stat, LovePoint lovePoint, float volumeBGM, float volumeSFX, float fontSize, float textSpeed, List<int> clearStory)
+    public InGameData(Stat stat, LovePoint lovePoint, int loadingCnt, int maxCnt, int number, int week, List<int> clearStory)
     {
         this.stat = stat;
         this.lovePoint = lovePoint;
-        this.volumeBGM = volumeBGM;
-        this.volumeSFX = volumeSFX;
-        this.fontSize = fontSize;
-        this.textSpeed = textSpeed;
+        this.loadingCnt = loadingCnt;
+        this.maxCnt = maxCnt;
+        this.number = number;
+        this.week = week;
         this.clearStory = clearStory;
     }
-    public GameData()
+
+    public InGameData()
     {
-        stat = new Stat();
-        lovePoint = new LovePoint();
-        volumeBGM = 0;
-        volumeSFX = 0;
-        fontSize = 0;
-        textSpeed = 0;
-        clearStory = new List<int>();
+        this.stat = new Stat();
+        this.lovePoint = new LovePoint();
+        this.loadingCnt = 0;
+        this.maxCnt = 10;
+        this.number = 0;
+        this.week = 1;
+        this.clearStory = new List<int>();
     }
 }
 
@@ -150,7 +153,22 @@ public class LovePoint
         html = 0;
     }
 }
+#endregion
 
+#region SaveData
+[System.Serializable]
+public class SaveData
+{
+    public List<InGameData> save;
+    public SaveData(List<InGameData> save)
+    {
+        this.save = save;
+    }
+    public SaveData()
+    {
+        this.save = new List<InGameData>();
+    }
+}
 #endregion
 
 #region TextData

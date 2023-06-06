@@ -27,8 +27,8 @@ public class SoundController : MonoBehaviour
         SoundPooling(); // 사운드 파일들을 풀링 해온다
         BGMSource = gameObject.AddComponent<AudioSource>();
         SFXSource = gameObject.AddComponent<AudioSource>();
-        BGMSource.volume = Single.data.inGameData.volumeBGM;
-        SFXSource.volume = Single.data.inGameData.volumeSFX;
+        BGMSource.volume = Single.data.optionData.volumeBGM;
+        SFXSource.volume = Single.data.optionData.volumeSFX;
         Play("홈화면");
     }
 
