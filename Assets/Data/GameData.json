@@ -3546,36 +3546,31 @@
         "loadingCnt": 4,
         "maxCnt": 4,
         "branch": [
-            0,
-            0,
-            0
-        ],
-        "week": 3,
-        "clearStory": [
             10,
-            1
+            0,
+            5
         ],
-        "crruentStat": "Main",
+        "week": 1,
+        "clearStory": [],
+        "crruentStat": "InGame",
         "textLog": [
             {
                 "branch": [
-                    1,
+                    10,
                     0,
                     0
                 ],
                 "charaterName": [
-                    "python"
+                    "unity"
                 ],
-                "charaterSprite": [
-                    "python_idle"
-                ],
+                "charaterSprite": [],
                 "charaterLocationType": [
                     1
                 ],
                 "charaterScale": [
                     1.0
                 ],
-                "charaterText": "테스트 내용입니다,,,,,,, 어느정도 길이가 있어야지 테스트가 가능하니 아무말이나 적어두겠습니다 감사합니다",
+                "charaterText": "자취방 사건 이후,  HTML은 한 달째 자리를 비웠다.",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
@@ -3584,23 +3579,21 @@
             },
             {
                 "branch": [
-                    1,
+                    10,
                     0,
                     1
                 ],
                 "charaterName": [
-                    "python"
+                    "unity"
                 ],
-                "charaterSprite": [
-                    "python_idle"
-                ],
+                "charaterSprite": [],
                 "charaterLocationType": [
                     1
                 ],
                 "charaterScale": [
                     1.0
                 ],
-                "charaterText": "또 다른 테스트 내용입니다 전꺼와 같다면 테스트가 안됨으로 겹치지 않는 아무말이나 적어두겠습니다 감사합니다",
+                "charaterText": "왜 나를 속였을까?",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
@@ -3609,162 +3602,92 @@
             },
             {
                 "branch": [
-                    1,
+                    10,
                     0,
                     2
                 ],
                 "charaterName": [
-                    "python"
+                    "unity"
                 ],
-                "charaterSprite": [
-                    "python_idle"
-                ],
+                "charaterSprite": [],
                 "charaterLocationType": [
-                    5
+                    1
                 ],
                 "charaterScale": [
                     1.0
                 ],
-                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterText": "왜 아무한테도 말하지 않았을까?",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
-                "charaterChangeEffect": 1,
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
                 "branch": [
-                    1,
+                    10,
                     0,
                     3
                 ],
                 "charaterName": [
-                    "python",
-                    "java"
+                    "unity"
                 ],
-                "charaterSprite": [
-                    "python_idle",
-                    "java_idle"
-                ],
+                "charaterSprite": [],
                 "charaterLocationType": [
-                    5,
                     1
                 ],
                 "charaterScale": [
-                    1.0,
                     1.0
                 ],
-                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterText": "주인공은 분노인지 설명을 듣고 싶은 마음인지 정확히 알기 위해서, 사라진 HTML을 찾으러 간다.",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
-                "charaterChangeEffect": 1,
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
                 "branch": [
-                    1,
+                    10,
                     0,
                     4
                 ],
                 "charaterName": [
-                    "python",
-                    "java",
-                    "c++"
+                    "unity"
                 ],
-                "charaterSprite": [
-                    "python_idle",
-                    "java_idle",
-                    "c++_idle"
-                ],
+                "charaterSprite": [],
                 "charaterLocationType": [
-                    1,
-                    3,
-                    5
+                    1
                 ],
                 "charaterScale": [
-                    1.0,
-                    1.0,
                     1.0
                 ],
-                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterText": "우여곡절 끝에 만나게 된 HTML은 구석에서 시무룩하게 앉아 있다.",
                 "charaterVoice": "null",
                 "selectType": 0,
                 "BG": "기본배경_인게임",
-                "charaterChangeEffect": 1,
+                "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
             },
             {
                 "branch": [
-                    1,
+                    10,
                     0,
                     5
                 ],
                 "charaterName": [
-                    "python"
+                    "unity"
                 ],
-                "charaterSprite": [
-                    "python_idle"
-                ],
+                "charaterSprite": [],
                 "charaterLocationType": [
                     1
                 ],
                 "charaterScale": [
                     1.0
                 ],
-                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterText": "휴학계 작성했다고, 지금까지 힘들게 해서 미안했다고, 스스로를 알아가는 시간을 가지고 싶다고 말한다.",
                 "charaterVoice": "null",
-                "selectType": 2,
-                "BG": "기본배경_인게임",
-                "charaterChangeEffect": 0,
-                "BGChangeEffect": 0
-            },
-            {
-                "branch": [
-                    1,
-                    2,
-                    0
-                ],
-                "charaterName": [
-                    "python"
-                ],
-                "charaterSprite": [
-                    "python_idle"
-                ],
-                "charaterLocationType": [
-                    1
-                ],
-                "charaterScale": [
-                    1.0
-                ],
-                "charaterText": "2번 테스트~~~~~~~~~~~",
-                "charaterVoice": "null",
-                "selectType": 0,
-                "BG": "기본배경_인게임",
-                "charaterChangeEffect": 0,
-                "BGChangeEffect": 0
-            },
-            {
-                "branch": [
-                    1,
-                    2,
-                    1
-                ],
-                "charaterName": [
-                    "python"
-                ],
-                "charaterSprite": [
-                    "python_idle"
-                ],
-                "charaterLocationType": [
-                    1
-                ],
-                "charaterScale": [
-                    1.0
-                ],
-                "charaterText": "2번 테스트~~~~~~~~~~~~~~",
-                "charaterVoice": "null",
-                "selectType": 0,
+                "selectType": 7,
                 "BG": "기본배경_인게임",
                 "charaterChangeEffect": 0,
                 "BGChangeEffect": 0
@@ -3773,7 +3696,7 @@
     },
     "optionData": {
         "volumeBGM": 0.0,
-        "volumeSFX": 0.1693931519985199,
+        "volumeSFX": 0.3694131076335907,
         "fontSize": 60.0,
         "textSpeed": 0.019999999552965165,
         "auto": false

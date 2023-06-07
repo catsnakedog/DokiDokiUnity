@@ -41,6 +41,7 @@ public class InGame : MonoBehaviour
     GameObject log;
     GameObject UIOnOff;
     GameObject save;
+    GameObject skip;
     GameObject UIPanel;
     TMP_Text content; // 내용
     TMP_Text Cname; // 말하는 사람 이름
@@ -62,6 +63,7 @@ public class InGame : MonoBehaviour
         UIOnOff = transform.GetChild(2).GetChild(3).GetChild(2).gameObject;
         save = transform.GetChild(2).GetChild(3).GetChild(3).gameObject;
         UIPanel = transform.GetChild(3).gameObject;
+        skip = transform.GetChild(2).GetChild(3).GetChild(4).gameObject;
         content = textBox.transform.GetChild(0).GetComponent<TMP_Text>();
         Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>();
         number = Single.data.inGameData.branch[0];
@@ -80,8 +82,15 @@ public class InGame : MonoBehaviour
         UIOnOff.GetComponent<Button>().onClick.AddListener(UIOff);
         UIPanel.GetComponent<Button>().onClick.AddListener(UIOn);
         save.GetComponent<Button>().onClick.AddListener(Save);
+        skip.GetComponent<Button>().onClick.AddListener(Skip);
 
         GetAllTextData(); // 해당 스토리에 관련된 모든 데이터를 가져온다.
+    }
+
+    void Skip()
+    {
+        cnt = crruentBranchTextInfo.Count - 1;
+        SettingUI(crruentBranchTextInfo[cnt]);
     }
 
     void Save()
@@ -306,6 +315,7 @@ public class InGame : MonoBehaviour
     {
         Single.data.inGameData.textLog.Add(crruentBranchTextInfo[cnt]);
         isTextShow = true;
+        target.text = "";
         textShowDelay = Single.data.optionData.textSpeed;
         StringBuilder sb = new StringBuilder();
         if(textShowDelay == 0f)
@@ -325,8 +335,9 @@ public class InGame : MonoBehaviour
             }
             isTextShow = false;
         }
-        if(Single.data.optionData.auto)
+        if(Single.data.optionData.auto && !(cnt == crruentBranchTextInfo.Count - 1))
         {
+            yield return new WaitForSeconds(0.1f);
             NextText();
         }
     }
