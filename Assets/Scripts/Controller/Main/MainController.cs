@@ -27,9 +27,4 @@ public class MainController : MonoBehaviour
 
         UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Loading);
     }
-
-    public void Test()
-    {
-        UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Save);
-    }
 }

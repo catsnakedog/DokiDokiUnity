@@ -44,13 +44,15 @@ public class OptionData
     public float volumeSFX;
     public float fontSize;
     public float textSpeed;
+    public bool auto;
 
-    public OptionData(float volumeBGM, float volumeSFX, float fontSize, float textSpeed)
+    public OptionData(float volumeBGM, float volumeSFX, float fontSize, float textSpeed, bool auto)
     {
         this.volumeBGM = volumeBGM;
         this.volumeSFX = volumeSFX;
         this.fontSize = fontSize;
         this.textSpeed = textSpeed;
+        this.auto = auto;
     }
 
     public OptionData()
@@ -59,6 +61,7 @@ public class OptionData
         this.volumeSFX = 0;
         this.fontSize = 0;
         this.textSpeed = 0;
+        this.auto = false;
     }
 }
 #endregion
@@ -75,8 +78,9 @@ public class InGameData
     public int week;
     public List<int> clearStory;
     public string crruentStat;
+    public List<TextInfo> textLog;
 
-    public InGameData(Stat stat, LovePoint lovePoint, int loadingCnt, int maxCnt, List<int> branch, int week, List<int> clearStory, string crruentStat)
+    public InGameData(Stat stat, LovePoint lovePoint, int loadingCnt, int maxCnt, List<int> branch, int week, List<int> clearStory, string crruentStat, List<TextInfo> textLog)
     {
         this.stat = stat;
         this.lovePoint = lovePoint;
@@ -86,6 +90,7 @@ public class InGameData
         this.week = week;
         this.clearStory = clearStory;
         this.crruentStat = crruentStat;
+        this.textLog = textLog;
     }
 
     public InGameData()
@@ -98,6 +103,7 @@ public class InGameData
         this.week = 1;
         this.clearStory = new List<int>();
         this.crruentStat = "";
+        this.textLog = new List<TextInfo>();
     }
 }
 

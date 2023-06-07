@@ -59,6 +59,10 @@ public class Save : MonoBehaviour
 
     void Left()
     {
+        if (Single.data.inGameData.textLog.Count >= 1)
+        {
+            Single.data.inGameData.textLog.RemoveAt(Single.data.inGameData.textLog.Count - 1);
+        }
         main.UI.UIsetting(Define.UIlevel.Level1, (Define.UItype)Enum.Parse(typeof(Define.UItype), Single.data.inGameData.crruentStat));
         Destroy(gameObject);
     }
@@ -160,5 +164,10 @@ public class Save : MonoBehaviour
             A.clearStory.Add(temp);
         }
         A.crruentStat = B.crruentStat;
+        A.textLog.Clear();
+        foreach(TextInfo log in B.textLog)
+        {
+            A.textLog.Add(log);
+        }
     }
 }

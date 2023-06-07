@@ -23,6 +23,8 @@ public class Define
         Charater,
         Option,
         Save,
+        Log,
+        LogTextBox,
         maxCount
     }
 

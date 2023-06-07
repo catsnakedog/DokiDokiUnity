@@ -16,6 +16,7 @@ public class Main : MonoBehaviour
     GameObject table;
     GameObject content; // 스토리들이 들어갈 content
     GameObject option;
+    GameObject save;
 
     List<TMP_Text> lovePoint;
     List<TMP_Text> stat;
@@ -30,6 +31,7 @@ public class Main : MonoBehaviour
         table = transform.GetChild(3).gameObject;
         content = story.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
         option = transform.GetChild(4).gameObject;
+        save = transform.GetChild(5).gameObject;
 
         lovePoint = new List<TMP_Text>();
         stat = new List<TMP_Text>();
@@ -55,10 +57,16 @@ public class Main : MonoBehaviour
         }
 
         option.GetComponent<Button>().onClick.AddListener(Option);
+        save.GetComponent<Button>().onClick.AddListener(Save);
         BGSetting();
         StorySetting();
         TableSetting();
     }
+
+    void Save()
+    {
+        main.UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Save);
+    }    
 
     void Option()
     {

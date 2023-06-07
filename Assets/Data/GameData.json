@@ -25,7 +25,8 @@
                 ],
                 "week": 1,
                 "clearStory": [],
-                "crruentStat": "Main"
+                "crruentStat": "Main",
+                "textLog": []
             },
             {
                 "stat": {
@@ -45,15 +46,172 @@
                 "loadingCnt": 4,
                 "maxCnt": 4,
                 "branch": [
-                    6,
+                    2,
                     0,
                     0
                 ],
-                "week": 2,
-                "clearStory": [
-                    4
+                "week": 1,
+                "clearStory": [],
+                "crruentStat": "InGame",
+                "textLog": [
+                    {
+                        "branch": [
+                            2,
+                            0,
+                            0
+                        ],
+                        "charaterName": [
+                            "c#"
+                        ],
+                        "charaterSprite": [
+                            "c#_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    }
+                ]
+            },
+            {
+                "stat": {
+                    "plan": 0,
+                    "coding": 0,
+                    "graphic": 0,
+                    "sound": 0
+                },
+                "lovePoint": {
+                    "c": 0,
+                    "cplus": 0,
+                    "cshop": 0,
+                    "python": 0,
+                    "java": 0,
+                    "html": 0
+                },
+                "loadingCnt": 4,
+                "maxCnt": 4,
+                "branch": [
+                    1,
+                    0,
+                    3
                 ],
-                "crruentStat": "InGame"
+                "week": 1,
+                "clearStory": [],
+                "crruentStat": "InGame",
+                "textLog": [
+                    {
+                        "branch": [
+                            1,
+                            0,
+                            0
+                        ],
+                        "charaterName": [
+                            "python"
+                        ],
+                        "charaterSprite": [
+                            "python_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "테스트 내용입니다,,,,,,, 어느정도 길이가 있어야지 테스트가 가능하니 아무말이나 적어두겠습니다 감사합니다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            1,
+                            0,
+                            1
+                        ],
+                        "charaterName": [
+                            "python"
+                        ],
+                        "charaterSprite": [
+                            "python_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "또 다른 테스트 내용입니다 전꺼와 같다면 테스트가 안됨으로 겹치지 않는 아무말이나 적어두겠습니다 감사합니다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            1,
+                            0,
+                            2
+                        ],
+                        "charaterName": [
+                            "python"
+                        ],
+                        "charaterSprite": [
+                            "python_idle"
+                        ],
+                        "charaterLocationType": [
+                            5
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            1,
+                            0,
+                            3
+                        ],
+                        "charaterName": [
+                            "python",
+                            "java"
+                        ],
+                        "charaterSprite": [
+                            "python_idle",
+                            "java_idle"
+                        ],
+                        "charaterLocationType": [
+                            5,
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0,
+                            1.0
+                        ],
+                        "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    }
+                ]
             },
             {
                 "stat": {
@@ -74,12 +232,553 @@
                 "maxCnt": 4,
                 "branch": [
                     10,
-                    0,
-                    5
+                    2,
+                    16
                 ],
                 "week": 1,
                 "clearStory": [],
-                "crruentStat": "InGame"
+                "crruentStat": "InGame",
+                "textLog": [
+                    {
+                        "branch": [
+                            10,
+                            0,
+                            0
+                        ],
+                        "charaterName": [
+                            "unity"
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "자취방 사건 이후,  HTML은 한 달째 자리를 비웠다.",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            0,
+                            1
+                        ],
+                        "charaterName": [
+                            "unity"
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "왜 나를 속였을까?",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            0,
+                            2
+                        ],
+                        "charaterName": [
+                            "unity"
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "왜 아무한테도 말하지 않았을까?",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            0,
+                            3
+                        ],
+                        "charaterName": [
+                            "unity"
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "주인공은 분노인지 설명을 듣고 싶은 마음인지 정확히 알기 위해서, 사라진 HTML을 찾으러 간다.",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            0,
+                            4
+                        ],
+                        "charaterName": [
+                            "unity"
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "우여곡절 끝에 만나게 된 HTML은 구석에서 시무룩하게 앉아 있다.",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            0,
+                            5
+                        ],
+                        "charaterName": [
+                            "unity"
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "휴학계 작성했다고, 지금까지 힘들게 해서 미안했다고, 스스로를 알아가는 시간을 가지고 싶다고 말한다.",
+                        "charaterVoice": "null",
+                        "selectType": 7,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            0
+                        ],
+                        "charaterName": [
+                            "html"
+                        ],
+                        "charaterSprite": [
+                            "html_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "그래.. 그렇구나..",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            1
+                        ],
+                        "charaterName": [
+                            "html"
+                        ],
+                        "charaterSprite": [
+                            "html_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "난 이만 갈게..",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            2
+                        ],
+                        "charaterName": [
+                            "html"
+                        ],
+                        "charaterSprite": [
+                            "html_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "잘 지내길 바래",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            3
+                        ],
+                        "charaterName": [
+                            "html"
+                        ],
+                        "charaterSprite": [
+                            "html_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "아..! 참고로 그냥 말해주는데",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            4
+                        ],
+                        "charaterName": [
+                            "html"
+                        ],
+                        "charaterSprite": [
+                            "html_idle"
+                        ],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "좋아했었어. 이건 꾸며낸 게 아냐",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            5
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "나도 그랬다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            6
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "하지만, 거짓말을 하는 그녀를 믿을 수 없었다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            7
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "이 말은 진짜일까 거짓일까.",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            8
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "모든 것이 거짓이었던 너를, 나는 그렇게 보냈다..",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 1,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            9
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "그 이후로 2년이 지났다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            10
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "그 동안 군대를 다녀오고, 학교로 돌아왔다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            11
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "달라진 점이라면",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            12
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "저거.",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            13
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "그날 이후로, HTML의 그림자가 보이기 시작했다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            14
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "처음엔 진짜인 줄 알고 그에게 달려갔지만,",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            15
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "결국 허상이라는 것만 깨달았을 뿐이었다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    },
+                    {
+                        "branch": [
+                            10,
+                            2,
+                            16
+                        ],
+                        "charaterName": [
+                            ""
+                        ],
+                        "charaterSprite": [],
+                        "charaterLocationType": [
+                            1
+                        ],
+                        "charaterScale": [
+                            1.0
+                        ],
+                        "charaterText": "이후에 병원을 여러 곳 전전했지만, 아무 효과 없어서 요새는 그냥 애써 모른 척 지내고 있다",
+                        "charaterVoice": "null",
+                        "selectType": 0,
+                        "BG": "기본배경_인게임",
+                        "charaterChangeEffect": 0,
+                        "BGChangeEffect": 0
+                    }
+                ]
             }
         ]
     },
@@ -2847,18 +3546,236 @@
         "loadingCnt": 4,
         "maxCnt": 4,
         "branch": [
-            10,
             0,
-            5
+            0,
+            0
         ],
-        "week": 1,
-        "clearStory": [],
-        "crruentStat": "InGame"
+        "week": 3,
+        "clearStory": [
+            10,
+            1
+        ],
+        "crruentStat": "Main",
+        "textLog": [
+            {
+                "branch": [
+                    1,
+                    0,
+                    0
+                ],
+                "charaterName": [
+                    "python"
+                ],
+                "charaterSprite": [
+                    "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "테스트 내용입니다,,,,,,, 어느정도 길이가 있어야지 테스트가 가능하니 아무말이나 적어두겠습니다 감사합니다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    1,
+                    0,
+                    1
+                ],
+                "charaterName": [
+                    "python"
+                ],
+                "charaterSprite": [
+                    "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "또 다른 테스트 내용입니다 전꺼와 같다면 테스트가 안됨으로 겹치지 않는 아무말이나 적어두겠습니다 감사합니다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    1,
+                    0,
+                    2
+                ],
+                "charaterName": [
+                    "python"
+                ],
+                "charaterSprite": [
+                    "python_idle"
+                ],
+                "charaterLocationType": [
+                    5
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    1,
+                    0,
+                    3
+                ],
+                "charaterName": [
+                    "python",
+                    "java"
+                ],
+                "charaterSprite": [
+                    "python_idle",
+                    "java_idle"
+                ],
+                "charaterLocationType": [
+                    5,
+                    1
+                ],
+                "charaterScale": [
+                    1.0,
+                    1.0
+                ],
+                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    1,
+                    0,
+                    4
+                ],
+                "charaterName": [
+                    "python",
+                    "java",
+                    "c++"
+                ],
+                "charaterSprite": [
+                    "python_idle",
+                    "java_idle",
+                    "c++_idle"
+                ],
+                "charaterLocationType": [
+                    1,
+                    3,
+                    5
+                ],
+                "charaterScale": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 1,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    1,
+                    0,
+                    5
+                ],
+                "charaterName": [
+                    "python"
+                ],
+                "charaterSprite": [
+                    "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "여기서부터는 모두 동일합니다 캐릭터 위치 여러명  등장등등 여러가지를 테스트합니다",
+                "charaterVoice": "null",
+                "selectType": 2,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    1,
+                    2,
+                    0
+                ],
+                "charaterName": [
+                    "python"
+                ],
+                "charaterSprite": [
+                    "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "2번 테스트~~~~~~~~~~~",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            },
+            {
+                "branch": [
+                    1,
+                    2,
+                    1
+                ],
+                "charaterName": [
+                    "python"
+                ],
+                "charaterSprite": [
+                    "python_idle"
+                ],
+                "charaterLocationType": [
+                    1
+                ],
+                "charaterScale": [
+                    1.0
+                ],
+                "charaterText": "2번 테스트~~~~~~~~~~~~~~",
+                "charaterVoice": "null",
+                "selectType": 0,
+                "BG": "기본배경_인게임",
+                "charaterChangeEffect": 0,
+                "BGChangeEffect": 0
+            }
+        ]
     },
     "optionData": {
         "volumeBGM": 0.0,
         "volumeSFX": 0.1693931519985199,
-        "fontSize": 0.0,
-        "textSpeed": 0.019999999552965165
+        "fontSize": 60.0,
+        "textSpeed": 0.019999999552965165,
+        "auto": false
     }
 }

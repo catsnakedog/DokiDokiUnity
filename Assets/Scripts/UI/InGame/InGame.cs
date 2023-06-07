@@ -28,7 +28,6 @@ public class InGame : MonoBehaviour
     bool isTextShow;
     bool isBGChange;
     List<TextInfo> crruentBranchTextInfo;
-    public List<TextInfo> logTextInfo;
     public List<string> crruentIamgeList = new List<string>();
     Dictionary<int, List<TextInfo>> textDict; // 선택지 별로 text를 분리해서 저장해둠
     Dictionary<string, GameObject> imageDict;
@@ -39,6 +38,10 @@ public class InGame : MonoBehaviour
     GameObject textBox; // 테스트가 나오는 박스
     GameObject select;
     GameObject option;
+    GameObject log;
+    GameObject UIOnOff;
+    GameObject save;
+    GameObject UIPanel;
     TMP_Text content; // 내용
     TMP_Text Cname; // 말하는 사람 이름
 
@@ -51,10 +54,14 @@ public class InGame : MonoBehaviour
         main = MainController.main;
         defaultBG = transform.GetChild(0).GetComponent<Image>();
         BG = transform.GetChild(1).GetComponent<Image>();
-        Ch = transform.GetChild(2).gameObject;
-        textBox = transform.GetChild(3).gameObject;
-        select = transform.GetChild(4).gameObject;
-        option = transform.GetChild(5).gameObject;
+        Ch = transform.GetChild(2).GetChild(0).gameObject;
+        textBox = transform.GetChild(2).GetChild(1).gameObject;
+        select = transform.GetChild(2).GetChild(2).gameObject;
+        option = transform.GetChild(2).GetChild(3).GetChild(0).gameObject;
+        log = transform.GetChild(2).GetChild(3).GetChild(1).gameObject;
+        UIOnOff = transform.GetChild(2).GetChild(3).GetChild(2).gameObject;
+        save = transform.GetChild(2).GetChild(3).GetChild(3).gameObject;
+        UIPanel = transform.GetChild(3).gameObject;
         content = textBox.transform.GetChild(0).GetComponent<TMP_Text>();
         Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>();
         number = Single.data.inGameData.branch[0];
@@ -62,16 +69,44 @@ public class InGame : MonoBehaviour
         cnt = Single.data.inGameData.branch[2];
         textShowDelay = 0.05f;
         isTextShow = false;
-        logTextInfo = new List<TextInfo>();
+        UIPanel.SetActive(false);
         Single.data.inGameData.crruentStat = "InGame";
 
-        textBox.GetComponent<Button>().onClick.AddListener(nextText);
+        content.text = "";
+
+        textBox.GetComponent<Button>().onClick.AddListener(NextText);
         option.GetComponent<Button>().onClick.AddListener(Option);
+        log.GetComponent<Button>().onClick.AddListener(Log);
+        UIOnOff.GetComponent<Button>().onClick.AddListener(UIOff);
+        UIPanel.GetComponent<Button>().onClick.AddListener(UIOn);
+        save.GetComponent<Button>().onClick.AddListener(Save);
 
         GetAllTextData(); // 해당 스토리에 관련된 모든 데이터를 가져온다.
     }
 
-    void nextText() // 다음 텍스트 실행
+    void Save()
+    {
+        main.UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Save);
+    }
+
+    void UIOn()
+    {
+        transform.GetChild(2).gameObject.SetActive(true);
+        UIPanel.SetActive(false);
+    }
+
+    void UIOff()
+    {
+        transform.GetChild(2).gameObject.SetActive(false);
+        UIPanel.SetActive(true);
+    }
+
+    void Log()
+    {
+        main.UI.UIsetting(Define.UIlevel.Level3, Define.UItype.Log);
+    }
+
+    void NextText() // 다음 텍스트 실행
     {
         if(isBGChange)
         {
@@ -269,7 +304,7 @@ public class InGame : MonoBehaviour
 
     IEnumerator TextShow(TMP_Text target, string text)
     {
-        logTextInfo.Add(crruentBranchTextInfo[cnt]);
+        Single.data.inGameData.textLog.Add(crruentBranchTextInfo[cnt]);
         isTextShow = true;
         textShowDelay = Single.data.optionData.textSpeed;
         StringBuilder sb = new StringBuilder();
@@ -282,12 +317,17 @@ public class InGame : MonoBehaviour
         {
             for (int i = 0; i < text.Length; i++)
             {
+                target.fontSize = Single.data.optionData.fontSize;
                 textShowDelay = Single.data.optionData.textSpeed;
                 yield return new WaitForSeconds(textShowDelay);
                 sb.Append(text[i]);
                 target.text = sb.ToString();
             }
             isTextShow = false;
+        }
+        if(Single.data.optionData.auto)
+        {
+            NextText();
         }
     }
 
