@@ -25,7 +25,16 @@ public class Define
         Save,
         Log,
         LogTextBox,
-        maxCount
+        MaxCount
+    }
+
+    public enum EffectType
+    {
+        Effect0,
+        Effect1,
+        Effect2,
+        Effect3,
+        MaxCount
     }
 
     public enum BGM

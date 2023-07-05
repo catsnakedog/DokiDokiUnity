@@ -79,8 +79,8 @@ public class InGameData
     public List<int> clearStory;
     public string crruentStat;
     public List<TextInfo> textLog;
-
-    public InGameData(Stat stat, LovePoint lovePoint, int loadingCnt, int maxCnt, List<int> branch, int week, List<int> clearStory, string crruentStat, List<TextInfo> textLog)
+    public string year;
+    public InGameData(Stat stat, LovePoint lovePoint, int loadingCnt, int maxCnt, List<int> branch, int week, List<int> clearStory, string crruentStat, List<TextInfo> textLog, string year)
     {
         this.stat = stat;
         this.lovePoint = lovePoint;
@@ -91,6 +91,7 @@ public class InGameData
         this.clearStory = clearStory;
         this.crruentStat = crruentStat;
         this.textLog = textLog;
+        this.year = year;
     }
 
     public InGameData()
@@ -104,6 +105,7 @@ public class InGameData
         this.clearStory = new List<int>();
         this.crruentStat = "";
         this.textLog = new List<TextInfo>();
+        this.year = "";
     }
 }
 

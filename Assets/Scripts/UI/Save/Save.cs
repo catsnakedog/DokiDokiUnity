@@ -55,6 +55,7 @@ public class Save : MonoBehaviour
         saveBT.GetComponent<Button>().onClick.AddListener(SaveInGameData);
 
         SettingSave();
+        Time.timeScale = 0f;
     }
 
     void Left()
@@ -64,6 +65,7 @@ public class Save : MonoBehaviour
             Single.data.inGameData.textLog.RemoveAt(Single.data.inGameData.textLog.Count - 1);
         }
         main.UI.UIsetting(Define.UIlevel.Level1, (Define.UItype)Enum.Parse(typeof(Define.UItype), Single.data.inGameData.crruentStat));
+        Time.timeScale = 1f;
         Destroy(gameObject);
     }
 
@@ -98,7 +100,7 @@ public class Save : MonoBehaviour
                 break;
             }
             save[cnt].transform.GetChild(1).GetComponent<TMP_Text>().text = (page * 6 + cnt + 1).ToString() + "번 세이브 : " + Single.data.saveData.save[i].week.ToString() + "주차";
-            save[cnt].transform.GetChild(2).GetComponent<TMP_Text>().text = DateTime.Now.ToString(("yyyy-MM-dd"));
+            save[cnt].transform.GetChild(2).GetComponent<TMP_Text>().text = Single.data.saveData.save[page * 6 + cnt].year;
         }
 
         for(int i = cnt + 1; i < 6; i++)
@@ -122,6 +124,7 @@ public class Save : MonoBehaviour
     void SaveInGameData()
     {
         InGameData temp = new InGameData();
+        Single.data.inGameData.year = DateTime.Now.ToString(("yyyy-MM-dd"));
         Copy(temp, Single.data.inGameData);
         Single.data.saveData.save.Add(temp);
         Single.Save();
@@ -169,5 +172,6 @@ public class Save : MonoBehaviour
         {
             A.textLog.Add(log);
         }
+        A.year = B.year;
     }
 }

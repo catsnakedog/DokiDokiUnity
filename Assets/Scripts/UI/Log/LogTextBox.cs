@@ -23,6 +23,9 @@ public class LogTextBox : MonoBehaviour
         rightImage = transform.GetChild(0).GetChild(1).gameObject;
         content = transform.GetChild(1).GetComponent<TMP_Text>();
 
+        leftImage.SetActive(false);
+        rightImage.SetActive(false);
+
         SetLogText(textInfo);
     }
 

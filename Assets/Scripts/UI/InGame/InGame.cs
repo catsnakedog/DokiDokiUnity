@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
@@ -42,9 +43,12 @@ public class InGame : MonoBehaviour
     GameObject UIOnOff;
     GameObject save;
     GameObject skip;
+    GameObject sceneChange;
     GameObject UIPanel;
     TMP_Text content; // 내용
     TMP_Text Cname; // 말하는 사람 이름
+
+    Material m;
 
     Coroutine textCoru;
     Coroutine imageCoru;
@@ -55,15 +59,16 @@ public class InGame : MonoBehaviour
         main = MainController.main;
         defaultBG = transform.GetChild(0).GetComponent<Image>();
         BG = transform.GetChild(1).GetComponent<Image>();
-        Ch = transform.GetChild(2).GetChild(0).gameObject;
-        textBox = transform.GetChild(2).GetChild(1).gameObject;
-        select = transform.GetChild(2).GetChild(2).gameObject;
-        option = transform.GetChild(2).GetChild(3).GetChild(0).gameObject;
-        log = transform.GetChild(2).GetChild(3).GetChild(1).gameObject;
-        UIOnOff = transform.GetChild(2).GetChild(3).GetChild(2).gameObject;
-        save = transform.GetChild(2).GetChild(3).GetChild(3).gameObject;
-        UIPanel = transform.GetChild(3).gameObject;
-        skip = transform.GetChild(2).GetChild(3).GetChild(4).gameObject;
+        Ch = transform.GetChild(3).GetChild(0).gameObject;
+        textBox = transform.GetChild(3).GetChild(1).gameObject;
+        select = transform.GetChild(3).GetChild(2).gameObject;
+        option = transform.GetChild(3).GetChild(3).GetChild(0).gameObject;
+        log = transform.GetChild(3).GetChild(3).GetChild(1).gameObject;
+        UIOnOff = transform.GetChild(3).GetChild(3).GetChild(2).gameObject;
+        save = transform.GetChild(3).GetChild(3).GetChild(3).gameObject;
+        sceneChange = transform.GetChild(2).gameObject;
+        UIPanel = transform.GetChild(4).gameObject;
+        skip = transform.GetChild(3).GetChild(3).GetChild(4).gameObject;
         content = textBox.transform.GetChild(0).GetComponent<TMP_Text>();
         Cname = textBox.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>();
         number = Single.data.inGameData.branch[0];
@@ -73,8 +78,8 @@ public class InGame : MonoBehaviour
         isTextShow = false;
         UIPanel.SetActive(false);
         Single.data.inGameData.crruentStat = "InGame";
-
         content.text = "";
+        sceneChange.SetActive(false);
 
         textBox.GetComponent<Button>().onClick.AddListener(NextText);
         option.GetComponent<Button>().onClick.AddListener(Option);
@@ -183,6 +188,11 @@ public class InGame : MonoBehaviour
         isBGChange = true;
         defaultBG.color = new Color(1f, 1f, 1f, 1f);
         BG.color = new Color(1f, 1f, 1f, 1f);
+        m = main.resource.EffectType[(int)((Define.EffectType)Enum.Parse(typeof(Define.EffectType), "Effect" + info.BGChangeEffect.ToString()))];
+        sceneChange.GetComponent<Image>().material = m;
+        Quaternion tempQ;
+        tempQ = Quaternion.identity;
+        sceneChange.GetComponent<RectTransform>().localRotation = tempQ;
         StartCoroutine("ChangeBG" + info.BGChangeEffect);
         CharaterSetting(info);
     }
@@ -288,26 +298,69 @@ public class InGame : MonoBehaviour
     }
     IEnumerator ChangeBG2()
     {
-        Color color1 = BG.color;
-        Color color2 = defaultBG.color;
-        color1 = Color.black;
-        color1.a = 0f;
-        BG.color = color1;
-        BG.sprite = Single.data.spriteData.sprite["하얀배경"];
-        for (int i = 0; i < (float)BGChangeSpeed; i++)
+        isBGChange = true;
+        float time = 0.25f;
+        float count = 100f;
+        float num = -2f;
+        sceneChange.SetActive(true);
+        sceneChange.GetComponent<Image>().sprite = Single.data.spriteData.sprite["검은배경"];
+        m.SetTexture("Texture2D_b603e1495f8a4b77bcd7e1e4131decba", Single.data.spriteData.sprite["검은배경"].texture);
+        for (int i = 0; i < count; i++)
         {
-            color1.a += 1 / (float)BGChangeSpeed;
-            BG.color = color1;
-            yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
+            m.SetFloat("Vector1_c6295c2fa4c148b59face2cd7aeb6489", num);
+            yield return new WaitForSeconds(time / count);
+            num += 3f / count;
         }
-        defaultBG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
-        for (int i = 0; i < (float)BGChangeSpeed; i++)
+        BG.sprite = Single.data.spriteData.sprite["검은배경"];
+        yield return new WaitForSeconds(0.005f);
+        m.SetFloat("Vector1_c6295c2fa4c148b59face2cd7aeb6489", -1f);
+        num = -2f;
+        sceneChange.GetComponent<Image>().sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        m.SetTexture("Texture2D_b603e1495f8a4b77bcd7e1e4131decba", Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG].texture);
+        sceneChange.SetActive(true);
+        for (int i = 0; i < count; i++)
         {
-            color1.a -= 1 / (float)BGChangeSpeed;
-            BG.color = color1;
-            yield return new WaitForSeconds(BGChangeSecond / (float)BGChangeSpeed);
+            m.SetFloat("Vector1_c6295c2fa4c148b59face2cd7aeb6489", num);
+            yield return new WaitForSeconds(time / count);
+            num += 3f / count;
         }
-        BG.sprite = defaultBG.sprite;
+        BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        sceneChange.SetActive(false);
+        isBGChange = false;
+    }
+
+    IEnumerator ChangeBG3()
+    {
+        Quaternion tempQ = Quaternion.Euler(new Vector3(0f, 0f, 180f));
+        sceneChange.GetComponent<RectTransform>().localRotation = tempQ;
+        isBGChange = true;
+        float time = 0.5f;
+        float count = 100f;
+        float num = -1.6f;
+        sceneChange.SetActive(true);
+        sceneChange.GetComponent<Image>().sprite = Single.data.spriteData.sprite["검은배경"];
+        m.SetTexture("Texture2D_30c066f30c0d4dc386e8a44883371286", Single.data.spriteData.sprite["검은배경"].texture);
+        for (int i = 0; i < count; i++)
+        {
+            m.SetFloat("Vector1_0ab0ea99484c403b9b9f712dc84e4de0", num);
+            yield return new WaitForSeconds(time / count);
+            num += 3.1f / count;
+        }
+        BG.sprite = Single.data.spriteData.sprite["검은배경"];
+        yield return new WaitForSeconds(0.1f);
+        m.SetFloat("Vector1_0ab0ea99484c403b9b9f712dc84e4de0", -2f);
+        num = -2f;
+        sceneChange.GetComponent<Image>().sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        m.SetTexture("Texture2D_30c066f30c0d4dc386e8a44883371286", Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG].texture);
+        sceneChange.SetActive(true);
+        for (int i = 0; i < count; i++)
+        {
+            m.SetFloat("Vector1_0ab0ea99484c403b9b9f712dc84e4de0", num);
+            yield return new WaitForSeconds(time / count);
+            num += 3.1f / count;
+        }
+        BG.sprite = Single.data.spriteData.sprite[crruentBranchTextInfo[cnt].BG];
+        sceneChange.SetActive(false);
         isBGChange = false;
     }
 

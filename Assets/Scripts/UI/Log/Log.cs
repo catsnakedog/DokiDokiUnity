@@ -24,11 +24,13 @@ public class Log : MonoBehaviour
         left.GetComponent<Button>().onClick.AddListener(Left);
 
         SetLog(Single.data.inGameData.textLog);
+        Time.timeScale = 0f;
     }
 
     void Left()
     {
         Destroy(gameObject);
+        Time.timeScale = 1f;
     }
 
     public void SetLog(List<TextInfo> log)
